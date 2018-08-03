@@ -31,6 +31,7 @@ Themes are responsible for the appearance of the site. The theme used is based o
 
 Installation of theme
 ~~~~~~~~~~~~~~~~~~~~~~
+
 1) Make sure you have Node and npm installed.
 You can read a guide on how to install node here: https://docs.npmjs.com/getting-started/installing-node
 If you prefer to use Yarn_ instead of npm, install Yarn by following the guide here: https://yarnpkg.com/docs/install.
