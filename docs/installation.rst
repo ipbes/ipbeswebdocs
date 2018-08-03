@@ -10,14 +10,14 @@ Install the package with pip::
 Installation for web styles
 ============
 
-The IPBES theme uses [Gulp](http://gulpjs.com) to compile Sass. Gulp needs Node.
+The IPBES theme uses Gulp_ to compile Sass. Gulp needs Node.
 
 Step 1
 -----------------
 Make sure you have Node and npm installed.
 You can read a guide on how to install node here: https://docs.npmjs.com/getting-started/installing-node
 
-If you prefer to use [Yarn](https://yarnpkg.com) instead of npm, install Yarn by following the guide here: https://yarnpkg.com/docs/install.
+If you prefer to use Yarn_ instead of npm, install Yarn by following the guide here: https://yarnpkg.com/docs/install.
 
 Step 2
 -----------------
@@ -47,3 +47,5 @@ Run::
     gulp dist`    
     
     
+.. _Gulp: http://gulpjs.com
+.. _Yarn: https://yarnpkg.com
