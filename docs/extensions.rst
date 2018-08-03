@@ -59,7 +59,7 @@ copied to the panthoen repository in the `sites/all/themes` folder::
 
 6) Run gulp to copy the minified styles to the project directory::
 
-    gulp dist`    
+    gulp dist
     
     
 .. _Gulp: http://gulpjs.com
