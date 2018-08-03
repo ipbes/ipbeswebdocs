@@ -10,10 +10,5 @@ The Pantheon workflow requires code to be committed to dev and pulled up to <tes
 
 .. image:: images/pantheon_workflow.png
    :alt: Pantheon code and database flows.
-
-   
-Advantages
-----------
-
-   
+  
 .. _Pantheon: www.pantheon.io
