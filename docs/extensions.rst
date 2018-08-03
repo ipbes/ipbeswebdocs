@@ -1,11 +1,8 @@
-Extending and Customizing DKAN
+Extending and Customizing the website
 ===============================
-
-Much additional functionality can be added simply by installing one of the
-tens of thousands of `contrib  modules <https://www.drupal.org/project/project_module>`_
-from the Drupal community. However, as a `Drupal
-Distribution <https://drupal.org/documentation/build/distributions>`_ DKAN is a
-flexible framework which developers can also build off of and add to.
+The IPBES website is based on DKAN, a `Drupal
+Distribution <https://drupal.org/documentation/build/distributions>`_. Additional modules have been
+added to extend functionality. Modules are added from contributed modules available from the Drupal Community `contrib  modules <https://www.drupal.org/project/project_module>`_ from the Drupal community. However, as 
 
 DKAN consists of of a distribution profile which manages the initial
 installation, 3rd party libraries and drupal modules, and DKAN specific
