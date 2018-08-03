@@ -2,7 +2,7 @@ Web hosting
 ===========
 The IPBES website is hosted on Pantheon_
 
-.. image:: ..images/pantheon_workflow.png
+.. image:: images/pantheon_workflow.png
    :alt: Pantheon code and database flows.
 
    
