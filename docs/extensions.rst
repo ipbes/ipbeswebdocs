@@ -20,4 +20,5 @@ The modules and themes should not be updated or changed within the DKAN folder. 
          libraries/ (your libraries)
          modules/ (your modules)
             contrib/ (modules from Drupal)
+            custom/ (custom modules)
          themes/ (your themes)
