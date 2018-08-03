@@ -1,0 +1,778 @@
+$view = new view();
+$view->name = 'conflict_of_interest';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'entityform';
+$view->human_name = 'Conflict of interest';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Conflict of interest submissions';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  3 => '3',
+  8 => '8',
+);
+$handler->display->display_options['cache']['type'] = 'time';
+$handler->display->display_options['cache']['results_lifespan'] = '3600';
+$handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+$handler->display->display_options['cache']['output_lifespan'] = '3600';
+$handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '50';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'entityform_id' => 'entityform_id',
+  'field_search_by_surname_first_na' => 'field_search_by_surname_first_na',
+  'name' => 'name',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'field_current_employer' => 'field_current_employer',
+  'field_professional_activities' => 'field_professional_activities',
+  'field_financial_interests' => 'field_financial_interests',
+  'field_objectivity_independence' => 'field_objectivity_independence',
+  'edit_entityform' => 'edit_entityform',
+  'field_deliverables' => 'field_deliverables',
+  'created' => 'created',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'entityform_id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_search_by_surname_first_na' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_first_name' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_last_name' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_current_employer' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_professional_activities' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_financial_interests' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_objectivity_independence' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'edit_entityform' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_deliverables' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'created' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = 'Displaying @start - @end of @total submissions';
+/* Relationship: Entityform Submission: Uid */
+$handler->display->display_options['relationships']['uid']['id'] = 'uid';
+$handler->display->display_options['relationships']['uid']['table'] = 'entityform';
+$handler->display->display_options['relationships']['uid']['field'] = 'uid';
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['id'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['table'] = 'users';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['field'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['relationship'] = 'uid';
+/* Field: Entityform Submission: Entityform submission ID */
+$handler->display->display_options['fields']['entityform_id']['id'] = 'entityform_id';
+$handler->display->display_options['fields']['entityform_id']['table'] = 'entityform';
+$handler->display->display_options['fields']['entityform_id']['field'] = 'entityform_id';
+$handler->display->display_options['fields']['entityform_id']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['entityform_id']['alter']['path'] = 'https://www.ipbes.net/entityform/[entityform_id]/edit?destination=/admin/ipbesusers/coi';
+$handler->display->display_options['fields']['entityform_id']['separator'] = '';
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'uid';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Organisation */
+$handler->display->display_options['fields']['field_organisation']['id'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['table'] = 'field_data_field_organisation';
+$handler->display->display_options['fields']['field_organisation']['field'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: (1)	Are you involved in any significant and relevant professional activities that might be considered as constituting a conflict */
+$handler->display->display_options['fields']['field_professional_activities']['id'] = 'field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['table'] = 'field_data_field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['field'] = 'field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['label'] = '1. Professional activities';
+$handler->display->display_options['fields']['field_professional_activities']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: 2)	Do you have any significant and relevant financial interests in the subject matter of the work in which you will be involved */
+$handler->display->display_options['fields']['field_financial_interests']['id'] = 'field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['table'] = 'field_data_field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['field'] = 'field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['label'] = '2. Financial Interests';
+$handler->display->display_options['fields']['field_financial_interests']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: (3)	Is there any other interest that could affect your objectivity or independence in the work in which you will be involved? */
+$handler->display->display_options['fields']['field_objectivity_independence']['id'] = 'field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['table'] = 'field_data_field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['field'] = 'field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['label'] = '3. Objectivity/Independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Date submitted */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'entityform';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['date_format'] = 'short';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+/* Field: User: coi_compliant */
+$handler->display->display_options['fields']['field_coi_compliant']['id'] = 'field_coi_compliant';
+$handler->display->display_options['fields']['field_coi_compliant']['table'] = 'field_data_field_coi_compliant';
+$handler->display->display_options['fields']['field_coi_compliant']['field'] = 'field_coi_compliant';
+$handler->display->display_options['fields']['field_coi_compliant']['relationship'] = 'uid';
+$handler->display->display_options['fields']['field_coi_compliant']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Sort criterion: Entityform Submission: Date submitted */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'entityform';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+$handler->display->display_options['sorts']['created']['granularity'] = 'day';
+/* Filter criterion: Entityform Submission: Entityform Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'entityform';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'conflict_of_interest_declaration' => 'conflict_of_interest_declaration',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Entityform Submission: (1)	Are you involved in any significant and relevant professional activities that might be considered as constituting a conflict (field_professional_activities) */
+$handler->display->display_options['filters']['field_professional_activities_value']['id'] = 'field_professional_activities_value';
+$handler->display->display_options['filters']['field_professional_activities_value']['table'] = 'field_data_field_professional_activities';
+$handler->display->display_options['filters']['field_professional_activities_value']['field'] = 'field_professional_activities_value';
+$handler->display->display_options['filters']['field_professional_activities_value']['group'] = 1;
+$handler->display->display_options['filters']['field_professional_activities_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_professional_activities_value']['expose']['operator_id'] = 'field_professional_activities_value_op';
+$handler->display->display_options['filters']['field_professional_activities_value']['expose']['label'] = 'Professional';
+$handler->display->display_options['filters']['field_professional_activities_value']['expose']['operator'] = 'field_professional_activities_value_op';
+$handler->display->display_options['filters']['field_professional_activities_value']['expose']['identifier'] = 'field_professional_activities_value';
+$handler->display->display_options['filters']['field_professional_activities_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  7 => 0,
+  6 => 0,
+  8 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  13 => 0,
+  14 => 0,
+);
+/* Filter criterion: Entityform Submission: 2)	Do you have any significant and relevant financial interests in the subject matter of the work in which you will be involved (field_financial_interests) */
+$handler->display->display_options['filters']['field_financial_interests_value']['id'] = 'field_financial_interests_value';
+$handler->display->display_options['filters']['field_financial_interests_value']['table'] = 'field_data_field_financial_interests';
+$handler->display->display_options['filters']['field_financial_interests_value']['field'] = 'field_financial_interests_value';
+$handler->display->display_options['filters']['field_financial_interests_value']['group'] = 1;
+$handler->display->display_options['filters']['field_financial_interests_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_financial_interests_value']['expose']['operator_id'] = 'field_financial_interests_value_op';
+$handler->display->display_options['filters']['field_financial_interests_value']['expose']['label'] = 'Financial';
+$handler->display->display_options['filters']['field_financial_interests_value']['expose']['operator'] = 'field_financial_interests_value_op';
+$handler->display->display_options['filters']['field_financial_interests_value']['expose']['identifier'] = 'field_financial_interests_value';
+$handler->display->display_options['filters']['field_financial_interests_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  7 => 0,
+  6 => 0,
+  8 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  13 => 0,
+  14 => 0,
+);
+/* Filter criterion: Entityform Submission: (3)	Is there any other interest that could affect your objectivity or independence in the work in which you will be involved? (field_objectivity_independence) */
+$handler->display->display_options['filters']['field_objectivity_independence_value']['id'] = 'field_objectivity_independence_value';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['table'] = 'field_data_field_objectivity_independence';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['field'] = 'field_objectivity_independence_value';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['group'] = 1;
+$handler->display->display_options['filters']['field_objectivity_independence_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_objectivity_independence_value']['expose']['operator_id'] = 'field_objectivity_independence_value_op';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['expose']['label'] = 'Objectivity';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['expose']['operator'] = 'field_objectivity_independence_value_op';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['expose']['identifier'] = 'field_objectivity_independence_value';
+$handler->display->display_options['filters']['field_objectivity_independence_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  7 => 0,
+  6 => 0,
+  8 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  13 => 0,
+  14 => 0,
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+  29 => 0,
+  30 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'name' => 'name',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['path'] = 'admin/ipbesusers/coi';
+$handler->display->display_options['menu']['type'] = 'tab';
+$handler->display->display_options['menu']['title'] = 'Conflict declarations';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'management';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
+
+/* Display: Data export */
+$handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+$handler->display->display_options['style_options']['provide_file'] = 1;
+$handler->display->display_options['style_options']['filename'] = 'coi.csv';
+$handler->display->display_options['style_options']['parent_sort'] = 0;
+$handler->display->display_options['style_options']['quote'] = 1;
+$handler->display->display_options['style_options']['trim'] = 0;
+$handler->display->display_options['style_options']['replace_newlines'] = 0;
+$handler->display->display_options['style_options']['newline_token'] = '1';
+$handler->display->display_options['style_options']['header'] = 1;
+$handler->display->display_options['style_options']['keep_html'] = 0;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Entityform Submission: Entityform submission ID */
+$handler->display->display_options['fields']['entityform_id']['id'] = 'entityform_id';
+$handler->display->display_options['fields']['entityform_id']['table'] = 'entityform';
+$handler->display->display_options['fields']['entityform_id']['field'] = 'entityform_id';
+$handler->display->display_options['fields']['entityform_id']['separator'] = '';
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'uid';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Organisation */
+$handler->display->display_options['fields']['field_organisation']['id'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['table'] = 'field_data_field_organisation';
+$handler->display->display_options['fields']['field_organisation']['field'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['label'] = 'Current Employer';
+$handler->display->display_options['fields']['field_organisation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: (1)	Are you involved in any significant and relevant professional activities that might be considered as constituting a conflict */
+$handler->display->display_options['fields']['field_professional_activities']['id'] = 'field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['table'] = 'field_data_field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['field'] = 'field_professional_activities';
+$handler->display->display_options['fields']['field_professional_activities']['label'] = '1. Professional activities';
+$handler->display->display_options['fields']['field_professional_activities']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Professional activities details */
+$handler->display->display_options['fields']['field_professional_activities_de']['id'] = 'field_professional_activities_de';
+$handler->display->display_options['fields']['field_professional_activities_de']['table'] = 'field_data_field_professional_activities_de';
+$handler->display->display_options['fields']['field_professional_activities_de']['field'] = 'field_professional_activities_de';
+$handler->display->display_options['fields']['field_professional_activities_de']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Professional upload */
+$handler->display->display_options['fields']['field_professional_upload']['id'] = 'field_professional_upload';
+$handler->display->display_options['fields']['field_professional_upload']['table'] = 'field_data_field_professional_upload';
+$handler->display->display_options['fields']['field_professional_upload']['field'] = 'field_professional_upload';
+$handler->display->display_options['fields']['field_professional_upload']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_professional_upload']['type'] = 'file_url_plain';
+$handler->display->display_options['fields']['field_professional_upload']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: 2)	Do you have any significant and relevant financial interests in the subject matter of the work in which you will be involved */
+$handler->display->display_options['fields']['field_financial_interests']['id'] = 'field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['table'] = 'field_data_field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['field'] = 'field_financial_interests';
+$handler->display->display_options['fields']['field_financial_interests']['label'] = '2. Financial Interests';
+$handler->display->display_options['fields']['field_financial_interests']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission:   Financial interests details */
+$handler->display->display_options['fields']['field_financial_interests_detail']['id'] = 'field_financial_interests_detail';
+$handler->display->display_options['fields']['field_financial_interests_detail']['table'] = 'field_data_field_financial_interests_detail';
+$handler->display->display_options['fields']['field_financial_interests_detail']['field'] = 'field_financial_interests_detail';
+$handler->display->display_options['fields']['field_financial_interests_detail']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Financial interests upload */
+$handler->display->display_options['fields']['field_financial_interests_upload']['id'] = 'field_financial_interests_upload';
+$handler->display->display_options['fields']['field_financial_interests_upload']['table'] = 'field_data_field_financial_interests_upload';
+$handler->display->display_options['fields']['field_financial_interests_upload']['field'] = 'field_financial_interests_upload';
+$handler->display->display_options['fields']['field_financial_interests_upload']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_financial_interests_upload']['type'] = 'file_url_plain';
+$handler->display->display_options['fields']['field_financial_interests_upload']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: (3)	Is there any other interest that could affect your objectivity or independence in the work in which you will be involved? */
+$handler->display->display_options['fields']['field_objectivity_independence']['id'] = 'field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['table'] = 'field_data_field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['field'] = 'field_objectivity_independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['label'] = '3. Objectivity/Independence';
+$handler->display->display_options['fields']['field_objectivity_independence']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Objectivity & Independence details */
+$handler->display->display_options['fields']['field_objectivity_indep_details']['id'] = 'field_objectivity_indep_details';
+$handler->display->display_options['fields']['field_objectivity_indep_details']['table'] = 'field_data_field_objectivity_indep_details';
+$handler->display->display_options['fields']['field_objectivity_indep_details']['field'] = 'field_objectivity_indep_details';
+$handler->display->display_options['fields']['field_objectivity_indep_details']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Objectivity & Independence upload */
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['id'] = 'field_objectivity_ind_upload';
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['table'] = 'field_data_field_objectivity_ind_upload';
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['field'] = 'field_objectivity_ind_upload';
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['type'] = 'file_url_plain';
+$handler->display->display_options['fields']['field_objectivity_ind_upload']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Date submitted */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'entityform';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['date_format'] = 'iso_8601_date';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+/* Field: Entityform Submission: Address line 1 */
+$handler->display->display_options['fields']['field_address_line_1']['id'] = 'field_address_line_1';
+$handler->display->display_options['fields']['field_address_line_1']['table'] = 'field_data_field_address_line_1';
+$handler->display->display_options['fields']['field_address_line_1']['field'] = 'field_address_line_1';
+$handler->display->display_options['fields']['field_address_line_1']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: Address line 2 */
+$handler->display->display_options['fields']['field_address_line_2']['id'] = 'field_address_line_2';
+$handler->display->display_options['fields']['field_address_line_2']['table'] = 'field_data_field_address_line_2';
+$handler->display->display_options['fields']['field_address_line_2']['field'] = 'field_address_line_2';
+$handler->display->display_options['fields']['field_address_line_2']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: City */
+$handler->display->display_options['fields']['field_city']['id'] = 'field_city';
+$handler->display->display_options['fields']['field_city']['table'] = 'field_data_field_city';
+$handler->display->display_options['fields']['field_city']['field'] = 'field_city';
+$handler->display->display_options['fields']['field_city']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Country */
+$handler->display->display_options['fields']['field_country']['id'] = 'field_countryr';
+$handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
+$handler->display->display_options['fields']['field_country']['field'] = 'field_country';
+$handler->display->display_options['fields']['field_country']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_country']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Entityform Submission: I confirm that I have read and understood the aforementioned terms */
+$handler->display->display_options['fields']['field_coi_confirmation']['id'] = 'field_coi_confirmation';
+$handler->display->display_options['fields']['field_coi_confirmation']['table'] = 'field_data_field_coi_confirmation';
+$handler->display->display_options['fields']['field_coi_confirmation']['field'] = 'field_coi_confirmation';
+$handler->display->display_options['fields']['field_coi_confirmation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['path'] = 'admin/coi/export';
+$handler->display->display_options['displays'] = array(
+  'page' => 'page',
+  'default' => 0,
+);
+$handler->display->display_options['use_batch'] = 'batch';
+$handler->display->display_options['segment_size'] = '100';

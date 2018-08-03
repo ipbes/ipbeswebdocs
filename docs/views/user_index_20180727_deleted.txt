@@ -1,0 +1,38 @@
+$view = new view();
+$view->name = 'user_index';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'search_api_index_user_index';
+$view->human_name = 'User index';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Indexed User: User ID */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'search_api_index_user_index';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+/* Field: Main profile profile: Nationality 1 (indexed) */
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['id'] = 'profile_main_field_nationality1_tag';
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['table'] = 'search_api_index_user_index';
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['field'] = 'profile_main_field_nationality1_tag';
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['view_mode'] = 'full';
+$handler->display->display_options['fields']['profile_main_field_nationality1_tag']['bypass_access'] = 0;
+/* Field: Main profile profile: Nationality 2 (indexed) */
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['id'] = 'profile_main_field_nationality2_tag';
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['table'] = 'search_api_index_user_index';
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['field'] = 'profile_main_field_nationality2_tag';
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['view_mode'] = 'full';
+$handler->display->display_options['fields']['profile_main_field_nationality2_tag']['bypass_access'] = 0;

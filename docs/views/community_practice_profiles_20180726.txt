@@ -1,0 +1,525 @@
+$view = new view();
+$view->name = 'community_practice_profiles';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'profile';
+$view->human_name = ' Community of Practice (based on profiles)';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = ' Community of Practice ';
+$handler->display->display_options['css_class'] = 'user-display';
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+$handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+$handler->display->display_options['exposed_form']['options']['bef'] = array(
+  'general' => array(
+    'input_required' => 0,
+    'text_input_required' => array(
+      'text_input_required' => array(
+        'value' => 'Select any filter and click on Apply to see results',
+        'format' => 'basic',
+      ),
+    ),
+    'allow_secondary' => 0,
+    'secondary_label' => 'Advanced options',
+    'secondary_collapse_override' => '0',
+  ),
+  'combine' => array(
+    'bef_format' => 'default',
+    'more_options' => array(
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+  'field_category_policy_instrument_tid' => array(
+    'bef_format' => 'bef',
+    'more_options' => array(
+      'bef_select_all_none' => 0,
+      'bef_collapsible' => 1,
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+          1 => 'vocabulary',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+  'field_pstm_family_tid' => array(
+    'bef_format' => 'bef',
+    'more_options' => array(
+      'bef_select_all_none' => 0,
+      'bef_collapsible' => 1,
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+          1 => 'vocabulary',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+  'field_sub_region_tid' => array(
+    'bef_format' => 'bef',
+    'more_options' => array(
+      'bef_select_all_none' => 0,
+      'bef_collapsible' => 1,
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+          1 => 'vocabulary',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+);
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '10';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = 'col-xs-6 col-sm-4 col-md-4  col-lg-3  auto-clear';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+/* Relationship: Profile: User uid */
+$handler->display->display_options['relationships']['user']['id'] = 'user';
+$handler->display->display_options['relationships']['user']['table'] = 'profile';
+$handler->display->display_options['relationships']['user']['field'] = 'user';
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_tools_and_instruments_eva_target_id']['id'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['relationships']['field_tools_and_instruments_eva_target_id']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['relationships']['field_tools_and_instruments_eva_target_id']['field'] = 'field_tools_and_instruments_eva_target_id';
+/* Relationship: Field: Nationality 1 (field_nationality1_tag) */
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['id'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['field'] = 'field_nationality1_tag_tid';
+/* Relationship: Field: Nationality 2 (field_nationality2_tag) */
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['id'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['field'] = 'field_nationality2_tag_tid';
+/* Relationship: Field: Sub/region covered (field_sub_region) */
+$handler->display->display_options['relationships']['field_sub_region_tid']['id'] = 'field_sub_region_tid';
+$handler->display->display_options['relationships']['field_sub_region_tid']['table'] = 'field_data_field_sub_region';
+$handler->display->display_options['relationships']['field_sub_region_tid']['field'] = 'field_sub_region_tid';
+$handler->display->display_options['relationships']['field_sub_region_tid']['relationship'] = 'field_nationality1_tag_tid';
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'user';
+$handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+/* Field: User: Picture */
+$handler->display->display_options['fields']['picture']['id'] = 'picture';
+$handler->display->display_options['fields']['picture']['table'] = 'users';
+$handler->display->display_options['fields']['picture']['field'] = 'picture';
+$handler->display->display_options['fields']['picture']['relationship'] = 'user';
+$handler->display->display_options['fields']['picture']['label'] = '';
+$handler->display->display_options['fields']['picture']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['picture']['empty'] = '<a href="user/[uid]"><img src="/sites/default/files/pictures/default_profile_image.png"/> </a>';
+$handler->display->display_options['fields']['picture']['image_style'] = 'square_thumbnail';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['label'] = '';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['label'] = '';
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name]  [field_last_name] ';
+$handler->display->display_options['fields']['field_last_name']['element_type'] = 'strong';
+$handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_last_name']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['label'] = '';
+$handler->display->display_options['fields']['field_nationality1_tag']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['label'] = '';
+$handler->display->display_options['fields']['field_nationality2_tag']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Privatemsg: Send Privatemsg link */
+$handler->display->display_options['fields']['privatemsg_link']['id'] = 'privatemsg_link';
+$handler->display->display_options['fields']['privatemsg_link']['table'] = 'users';
+$handler->display->display_options['fields']['privatemsg_link']['field'] = 'privatemsg_link';
+$handler->display->display_options['fields']['privatemsg_link']['relationship'] = 'user';
+$handler->display->display_options['fields']['privatemsg_link']['label'] = '';
+$handler->display->display_options['fields']['privatemsg_link']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['privatemsg_link']['return'] = 1;
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = '';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '<hr/>';
+$handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+/* Field: Field: Tools and instruments */
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['id'] = 'field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['field'] = 'field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['label'] = '';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 1,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['group_column'] = 'entity_id';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['multi_type'] = 'ul';
+/* Field: Field: Sub/region covered */
+$handler->display->display_options['fields']['field_sub_region']['id'] = 'field_sub_region';
+$handler->display->display_options['fields']['field_sub_region']['table'] = 'field_data_field_sub_region';
+$handler->display->display_options['fields']['field_sub_region']['field'] = 'field_sub_region';
+$handler->display->display_options['fields']['field_sub_region']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['fields']['field_sub_region']['label'] = '';
+$handler->display->display_options['fields']['field_sub_region']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_sub_region']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_sub_region']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_sub_region']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_sub_region']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_sub_region']['delta_offset'] = '0';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+$handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_1']['field'] = 'name';
+$handler->display->display_options['fields']['name_1']['relationship'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_1']['alter']['alter_text'] = TRUE;
+/* Filter criterion: Profile: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'profile';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'main' => 'main',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Field: Tools and instruments (field_tools_and_instruments_eva) */
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['id'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['field'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['operator'] = 'not empty';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['group'] = 1;
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['group'] = 1;
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Tool/Instrument/Expert/Expert country (nationality)';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'field_tools_and_instruments_eva' => 'field_tools_and_instruments_eva',
+  'name' => 'name',
+  'name_1' => 'name_1',
+);
+/* Filter criterion: Content: Category of policy instruments  (field_category_policy_instrument) */
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['id'] = 'field_category_policy_instrument_tid';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['table'] = 'field_data_field_category_policy_instrument';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['field'] = 'field_category_policy_instrument_tid';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['relationship'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['operator_id'] = 'field_category_policy_instrument_tid_op';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['label'] = 'Category of policy instruments';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['operator'] = 'field_category_policy_instrument_tid_op';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['identifier'] = 'field_category_policy_instrument_tid';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_category_policy_instrument_tid']['vocabulary'] = 'policy_instrument_category';
+/* Filter criterion: Content: Family of policy support tools (field_pstm_family) */
+$handler->display->display_options['filters']['field_pstm_family_tid']['id'] = 'field_pstm_family_tid';
+$handler->display->display_options['filters']['field_pstm_family_tid']['table'] = 'field_data_field_pstm_family';
+$handler->display->display_options['filters']['field_pstm_family_tid']['field'] = 'field_pstm_family_tid';
+$handler->display->display_options['filters']['field_pstm_family_tid']['relationship'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_pstm_family_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_pstm_family_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['operator_id'] = 'field_pstm_family_tid_op';
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['label'] = 'Family of policy support tools';
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['operator'] = 'field_pstm_family_tid_op';
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['identifier'] = 'field_pstm_family_tid';
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_pstm_family_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+$handler->display->display_options['filters']['field_pstm_family_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_pstm_family_tid']['vocabulary'] = 'policy_support_family';
+/* Filter criterion: Field: Sub/region covered (field_sub_region) */
+$handler->display->display_options['filters']['field_sub_region_tid']['id'] = 'field_sub_region_tid';
+$handler->display->display_options['filters']['field_sub_region_tid']['table'] = 'field_data_field_sub_region';
+$handler->display->display_options['filters']['field_sub_region_tid']['field'] = 'field_sub_region_tid';
+$handler->display->display_options['filters']['field_sub_region_tid']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['filters']['field_sub_region_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['operator_id'] = 'field_sub_region_tid_op';
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['label'] = 'Sub/region covered';
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['operator'] = 'field_sub_region_tid_op';
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['identifier'] = 'field_sub_region_tid';
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['multiple'] = TRUE;
+$handler->display->display_options['filters']['field_sub_region_tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+$handler->display->display_options['filters']['field_sub_region_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_sub_region_tid']['vocabulary'] = 'assessment_sub_region';
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['path'] = 'community-practice-profiles';
+
+/* Display: Content pane: Community of Practice Profile */
+$handler = $view->new_display('panel_pane', 'Content pane: Community of Practice Profile', 'panel_pane_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['exposed_block'] = TRUE;
+$handler->display->display_options['inherit_panels_path'] = '1';

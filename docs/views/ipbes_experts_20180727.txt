@@ -1,0 +1,2093 @@
+$view = new view();
+$view->name = 'ipbes_experts';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'IPBES Experts';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = '<none>';
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'time';
+$handler->display->display_options['cache']['results_lifespan'] = '300';
+$handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+$handler->display->display_options['cache']['output_lifespan'] = '300';
+$handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'nothing_1' => 'nothing_1',
+  'field_full_name' => 'field_full_name',
+  'field_role_eva' => 'field_role_eva',
+  'field_gender_tag' => 'field_gender_tag',
+  'field_nationality1_tag' => 'field_nationality1_tag',
+  'field_nationality2_tag' => 'field_nationality2_tag',
+  'nothing' => 'nothing',
+  'name' => 'name',
+  'field_decision' => 'field_decision',
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'field_first_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_last_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_full_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_role_eva' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_gender_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality1_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality2_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_decision' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_1' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_2' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['format'] = 'basic';
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['id'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['field'] = 'field_search_users_accounts_target_id';
+/* Relationship: User: Profile */
+$handler->display->display_options['relationships']['profile']['id'] = 'profile';
+$handler->display->display_options['relationships']['profile']['table'] = 'users';
+$handler->display->display_options['relationships']['profile']['field'] = 'profile';
+$handler->display->display_options['relationships']['profile']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['relationships']['profile']['bundle_types'] = array(
+  'main' => 'main',
+);
+/* Relationship: Field: Nationality 1 (field_nationality1_tag) */
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['id'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['field'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['relationship'] = 'profile';
+/* Relationship: Field: Nationality 2 (field_nationality2_tag) */
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['id'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['field'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['relationship'] = 'profile';
+/* Relationship: Content: Chapter (field_chapter) */
+$handler->display->display_options['relationships']['field_chapter_tid']['id'] = 'field_chapter_tid';
+$handler->display->display_options['relationships']['field_chapter_tid']['table'] = 'field_data_field_chapter';
+$handler->display->display_options['relationships']['field_chapter_tid']['field'] = 'field_chapter_tid';
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['relationships']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['relationships']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = '[name]';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['type'] = 'text_plain';
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Name';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_last_name], [field_first_name]';
+$handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nothing_1']['alter']['path'] = 'user/[uid]';
+$handler->display->display_options['fields']['nothing_1']['element_type'] = 'div';
+$handler->display->display_options['fields']['nothing_1']['element_class'] = 'fix-width-40';
+/* Field: Content: Role */
+$handler->display->display_options['fields']['field_role_eva']['id'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['field'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['element_type'] = 'div';
+$handler->display->display_options['fields']['field_role_eva']['element_class'] = 'fix-width-20';
+$handler->display->display_options['fields']['field_role_eva']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Gender */
+$handler->display->display_options['fields']['field_gender_tag']['id'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['table'] = 'field_data_field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['field'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_gender_tag']['element_type'] = 'div';
+$handler->display->display_options['fields']['field_gender_tag']['element_class'] = 'fix-width-10';
+$handler->display->display_options['fields']['field_gender_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_gender_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Government */
+$handler->display->display_options['fields']['field_government']['id'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['table'] = 'field_data_field_government';
+$handler->display->display_options['fields']['field_government']['field'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_government']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_government']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Name of organisation */
+$handler->display->display_options['fields']['field_organisation']['id'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['table'] = 'field_data_field_organisation';
+$handler->display->display_options['fields']['field_organisation']['field'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['label'] = 'Organisation';
+$handler->display->display_options['fields']['field_organisation']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_organisation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+$handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_2']['label'] = 'Nominating government/organisation';
+$handler->display->display_options['fields']['nothing_2']['alter']['text'] = '[field_government][field_organisation]';
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality1_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality2_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Nationality(ies)';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_nationality1_tag]
+[field_nationality2_tag] ';
+$handler->display->display_options['fields']['nothing']['element_type'] = 'div';
+$handler->display->display_options['fields']['nothing']['element_class'] = 'fix-width-20';
+/* Field: Field: Decision */
+$handler->display->display_options['fields']['field_decision']['id'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['table'] = 'field_data_field_decision';
+$handler->display->display_options['fields']['field_decision']['field'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+$handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_1']['field'] = 'name';
+$handler->display->display_options['fields']['name_1']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_1']['alter']['alter_text'] = TRUE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_2']['id'] = 'name_2';
+$handler->display->display_options['fields']['name_2']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_2']['field'] = 'name';
+$handler->display->display_options['fields']['name_2']['relationship'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['fields']['name_2']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_2']['alter']['alter_text'] = TRUE;
+/* Field: Content: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['label'] = '';
+$handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+/* Sort criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['sorts']['field_role_eva_target_id_1']['id'] = 'field_role_eva_target_id_1';
+$handler->display->display_options['sorts']['field_role_eva_target_id_1']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['sorts']['field_role_eva_target_id_1']['field'] = 'field_role_eva_target_id';
+/* Sort criterion: Field: Last name (field_last_name) */
+$handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['relationship'] = 'profile';
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['nid']['not'] = TRUE;
+/* Contextual filter: Content: Has taxonomy term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+$handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = FALSE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
+$handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
+  'ipbes_assessment_regions' => 'ipbes_assessment_regions',
+  'deliverables' => 'deliverables',
+);
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'individual' => 'individual',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine_1']['id'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['table'] = 'views';
+$handler->display->display_options['filters']['combine_1']['field'] = 'combine';
+$handler->display->display_options['filters']['combine_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine_1']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine_1']['expose']['operator_id'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['label'] = 'Search by nationality';
+$handler->display->display_options['filters']['combine_1']['expose']['operator'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['identifier'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine_1']['fields'] = array(
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+/* Filter criterion: Field: Decision (field_decision) */
+$handler->display->display_options['filters']['field_decision_tid']['id'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['table'] = 'field_data_field_decision';
+$handler->display->display_options['filters']['field_decision_tid']['field'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['value'] = array(
+  858 => '858',
+);
+$handler->display->display_options['filters']['field_decision_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_decision_tid']['vocabulary'] = 'ipbes_selection_options';
+/* Filter criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['filters']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['filters']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator_id'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['label'] = 'Role';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['identifier'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+/* Filter criterion: Content: Chapter (field_chapter) */
+$handler->display->display_options['filters']['field_chapter_tid']['id'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['table'] = 'field_data_field_chapter';
+$handler->display->display_options['filters']['field_chapter_tid']['field'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['operator'] = 'not';
+$handler->display->display_options['filters']['field_chapter_tid']['value'] = array(
+  556 => '556',
+  557 => '557',
+);
+$handler->display->display_options['filters']['field_chapter_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_chapter_tid']['vocabulary'] = 'chapters';
+
+/* Display: Pane: Task force members */
+$handler = $view->new_display('panel_pane', 'Pane: Task force members', 'panel_pane_1');
+$handler->display->display_options['inherit_panels_path'] = '1';
+
+/* Display: Pane: Scoping experts */
+$handler = $view->new_display('panel_pane', 'Pane: Scoping experts', 'panel_pane_2');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'individual' => 'individual',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine_1']['id'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['table'] = 'views';
+$handler->display->display_options['filters']['combine_1']['field'] = 'combine';
+$handler->display->display_options['filters']['combine_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine_1']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine_1']['expose']['operator_id'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['label'] = 'Search by nationality';
+$handler->display->display_options['filters']['combine_1']['expose']['operator'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['identifier'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine_1']['fields'] = array(
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+/* Filter criterion: Field: Decision (field_decision) */
+$handler->display->display_options['filters']['field_decision_tid']['id'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['table'] = 'field_data_field_decision';
+$handler->display->display_options['filters']['field_decision_tid']['field'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['value'] = array(
+  858 => '858',
+);
+$handler->display->display_options['filters']['field_decision_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_decision_tid']['vocabulary'] = 'ipbes_selection_options';
+/* Filter criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['filters']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['filters']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['value'] = array(
+  343 => '343',
+);
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator_id'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['label'] = 'Role';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['identifier'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+);
+$handler->display->display_options['inherit_panels_path'] = '1';
+
+/* Display: Pane: Expert group */
+$handler = $view->new_display('panel_pane', 'Pane: Expert group', 'panel_pane_3');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'individual' => 'individual',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine_1']['id'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['table'] = 'views';
+$handler->display->display_options['filters']['combine_1']['field'] = 'combine';
+$handler->display->display_options['filters']['combine_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine_1']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine_1']['expose']['operator_id'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['label'] = 'Search by nationality';
+$handler->display->display_options['filters']['combine_1']['expose']['operator'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['identifier'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine_1']['fields'] = array(
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+/* Filter criterion: Field: Decision (field_decision) */
+$handler->display->display_options['filters']['field_decision_tid']['id'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['table'] = 'field_data_field_decision';
+$handler->display->display_options['filters']['field_decision_tid']['field'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['value'] = array(
+  858 => '858',
+);
+$handler->display->display_options['filters']['field_decision_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_decision_tid']['vocabulary'] = 'ipbes_selection_options';
+/* Filter criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['filters']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['filters']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator_id'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['label'] = 'Role';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['identifier'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+/* Filter criterion: Content: Chapter (field_chapter) */
+$handler->display->display_options['filters']['field_chapter_tid']['id'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['table'] = 'field_data_field_chapter';
+$handler->display->display_options['filters']['field_chapter_tid']['field'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['value'] = array(
+  0 => '556',
+  1 => '557',
+);
+$handler->display->display_options['filters']['field_chapter_tid']['vocabulary'] = 'chapters';
+$handler->display->display_options['inherit_panels_path'] = '1';
+
+/* Display: Pane: Assessment experts */
+$handler = $view->new_display('panel_pane', 'Pane: Assessment experts', 'panel_pane_4');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['grouping'] = array(
+  0 => array(
+    'field' => 'description',
+    'rendered' => 1,
+    'rendered_strip' => 0,
+  ),
+);
+$handler->display->display_options['style_options']['columns'] = array(
+  'uid' => 'uid',
+  'name' => 'name',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'nothing_1' => 'nothing_1',
+  'field_role_eva' => 'field_role_eva',
+  'field_gender_tag' => 'field_gender_tag',
+  'field_nationality1_tag' => 'field_nationality1_tag',
+  'field_nationality2_tag' => 'field_nationality2_tag',
+  'nothing' => 'nothing',
+  'field_decision' => 'field_decision',
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+  'description' => 'description',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'uid' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_first_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_last_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_role_eva' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_gender_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality1_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality2_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_decision' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_1' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_2' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'description' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = '[name]';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['type'] = 'text_plain';
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['label'] = '';
+$handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+$handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['edit_node']['element_type'] = 'div';
+$handler->display->display_options['fields']['edit_node']['element_class'] = 'fix-width-10';
+$handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Name';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_last_name], [field_first_name]
+[edit_node] ';
+$handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nothing_1']['alter']['path'] = 'user/[uid]';
+$handler->display->display_options['fields']['nothing_1']['element_class'] = 'fix-width-30';
+/* Field: Content: Role */
+$handler->display->display_options['fields']['field_role_eva']['id'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['field'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['element_class'] = 'fix-width-10';
+$handler->display->display_options['fields']['field_role_eva']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Gender */
+$handler->display->display_options['fields']['field_gender_tag']['id'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['table'] = 'field_data_field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['field'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_gender_tag']['element_class'] = 'fix-width-10';
+$handler->display->display_options['fields']['field_gender_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_gender_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Government */
+$handler->display->display_options['fields']['field_government']['id'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['table'] = 'field_data_field_government';
+$handler->display->display_options['fields']['field_government']['field'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_government']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_government']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Name of organisation */
+$handler->display->display_options['fields']['field_organisation']['id'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['table'] = 'field_data_field_organisation';
+$handler->display->display_options['fields']['field_organisation']['field'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['label'] = 'Organisation';
+$handler->display->display_options['fields']['field_organisation']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_organisation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+$handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_2']['label'] = 'Nominating government/organisation';
+$handler->display->display_options['fields']['nothing_2']['alter']['text'] = '[field_government][field_organisation]';
+$handler->display->display_options['fields']['nothing_2']['element_class'] = 'fix-width-30';
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality1_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality2_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Nationality(ies)';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_nationality1_tag]
+[field_nationality2_tag] ';
+$handler->display->display_options['fields']['nothing']['element_class'] = 'fix-width-20';
+/* Field: Field: Decision */
+$handler->display->display_options['fields']['field_decision']['id'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['table'] = 'field_data_field_decision';
+$handler->display->display_options['fields']['field_decision']['field'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+$handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_1']['field'] = 'name';
+$handler->display->display_options['fields']['name_1']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_1']['alter']['alter_text'] = TRUE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_2']['id'] = 'name_2';
+$handler->display->display_options['fields']['name_2']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_2']['field'] = 'name';
+$handler->display->display_options['fields']['name_2']['relationship'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['fields']['name_2']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_2']['alter']['alter_text'] = TRUE;
+/* Field: Taxonomy term: Term description */
+$handler->display->display_options['fields']['description']['id'] = 'description';
+$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['description']['field'] = 'description';
+$handler->display->display_options['fields']['description']['relationship'] = 'field_chapter_tid';
+$handler->display->display_options['fields']['description']['label'] = '';
+$handler->display->display_options['fields']['description']['exclude'] = TRUE;
+$handler->display->display_options['fields']['description']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Taxonomy term: Weight */
+$handler->display->display_options['sorts']['weight']['id'] = 'weight';
+$handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['weight']['field'] = 'weight';
+$handler->display->display_options['sorts']['weight']['relationship'] = 'field_chapter_tid';
+/* Sort criterion: Taxonomy term: Weight */
+$handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+$handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+$handler->display->display_options['sorts']['weight_1']['relationship'] = 'field_role_eva_target_id';
+/* Sort criterion: Field: Last name (field_last_name) */
+$handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['relationship'] = 'profile';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'individual' => 'individual',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine_1']['id'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['table'] = 'views';
+$handler->display->display_options['filters']['combine_1']['field'] = 'combine';
+$handler->display->display_options['filters']['combine_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine_1']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine_1']['expose']['operator_id'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['label'] = 'Search by nationality';
+$handler->display->display_options['filters']['combine_1']['expose']['operator'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['identifier'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine_1']['fields'] = array(
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+/* Filter criterion: Field: Decision (field_decision) */
+$handler->display->display_options['filters']['field_decision_tid']['id'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['table'] = 'field_data_field_decision';
+$handler->display->display_options['filters']['field_decision_tid']['field'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['value'] = array(
+  858 => '858',
+);
+$handler->display->display_options['filters']['field_decision_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_decision_tid']['vocabulary'] = 'ipbes_selection_options';
+/* Filter criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['filters']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['filters']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['operator'] = 'not in';
+$handler->display->display_options['filters']['field_role_eva_target_id']['value'] = array(
+  343 => '343',
+);
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator_id'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['label'] = 'Role';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['operator'] = 'field_role_eva_target_id_op';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['identifier'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+);
+/* Filter criterion: Content: Chapter (field_chapter) */
+$handler->display->display_options['filters']['field_chapter_tid']['id'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['table'] = 'field_data_field_chapter';
+$handler->display->display_options['filters']['field_chapter_tid']['field'] = 'field_chapter_tid';
+$handler->display->display_options['filters']['field_chapter_tid']['operator'] = 'not';
+$handler->display->display_options['filters']['field_chapter_tid']['value'] = array(
+  556 => '556',
+);
+$handler->display->display_options['filters']['field_chapter_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_chapter_tid']['vocabulary'] = 'chapters';
+$handler->display->display_options['inherit_panels_path'] = '1';
+
+/* Display: Pane: Fellows */
+$handler = $view->new_display('panel_pane', 'Pane: Fellows', 'panel_pane_5');
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['grouping'] = array(
+  0 => array(
+    'field' => 'field_deliverable',
+    'rendered' => 1,
+    'rendered_strip' => 0,
+  ),
+);
+$handler->display->display_options['style_options']['columns'] = array(
+  'uid' => 'uid',
+  'name' => 'name',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'nothing_1' => 'nothing_1',
+  'field_role_eva' => 'field_role_eva',
+  'field_gender_tag' => 'field_gender_tag',
+  'field_government' => 'field_government',
+  'field_organisation' => 'field_organisation',
+  'nothing_2' => 'nothing_2',
+  'field_nationality1_tag' => 'field_nationality1_tag',
+  'field_nationality2_tag' => 'field_nationality2_tag',
+  'nothing' => 'nothing',
+  'field_decision' => 'field_decision',
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+  'edit_node' => 'edit_node',
+  'field_deliverable' => 'field_deliverable',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'uid' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_first_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_last_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_role_eva' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_gender_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_government' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_organisation' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_2' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality1_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality2_tag' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_decision' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_1' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'name_2' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'edit_node' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_deliverable' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['id'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['field'] = 'field_search_users_accounts_target_id';
+/* Relationship: User: Profile */
+$handler->display->display_options['relationships']['profile']['id'] = 'profile';
+$handler->display->display_options['relationships']['profile']['table'] = 'users';
+$handler->display->display_options['relationships']['profile']['field'] = 'profile';
+$handler->display->display_options['relationships']['profile']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['relationships']['profile']['bundle_types'] = array(
+  'main' => 'main',
+);
+/* Relationship: Field: Nationality 1 (field_nationality1_tag) */
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['id'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['field'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['relationships']['field_nationality1_tag_tid']['relationship'] = 'profile';
+/* Relationship: Field: Nationality 2 (field_nationality2_tag) */
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['id'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['field'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['relationships']['field_nationality2_tag_tid']['relationship'] = 'profile';
+/* Relationship: Content: Chapter (field_chapter) */
+$handler->display->display_options['relationships']['field_chapter_tid']['id'] = 'field_chapter_tid';
+$handler->display->display_options['relationships']['field_chapter_tid']['table'] = 'field_data_field_chapter';
+$handler->display->display_options['relationships']['field_chapter_tid']['field'] = 'field_chapter_tid';
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['relationships']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['relationships']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+/* Relationship: Field: Deliverable (field_deliverable) */
+$handler->display->display_options['relationships']['field_deliverable_tid_1']['id'] = 'field_deliverable_tid_1';
+$handler->display->display_options['relationships']['field_deliverable_tid_1']['table'] = 'field_data_field_deliverable';
+$handler->display->display_options['relationships']['field_deliverable_tid_1']['field'] = 'field_deliverable_tid';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+/* Field: User: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'users';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['path'] = '[name]';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['type'] = 'text_plain';
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Name';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_last_name], [field_first_name]';
+$handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nothing_1']['alter']['path'] = 'user/[uid]';
+$handler->display->display_options['fields']['nothing_1']['element_type'] = 'div';
+$handler->display->display_options['fields']['nothing_1']['element_class'] = 'fix-width-40';
+/* Field: Content: Role */
+$handler->display->display_options['fields']['field_role_eva']['id'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['field'] = 'field_role_eva';
+$handler->display->display_options['fields']['field_role_eva']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_role_eva']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_role_eva']['element_type'] = 'div';
+$handler->display->display_options['fields']['field_role_eva']['element_class'] = 'fix-width-20';
+$handler->display->display_options['fields']['field_role_eva']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Gender */
+$handler->display->display_options['fields']['field_gender_tag']['id'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['table'] = 'field_data_field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['field'] = 'field_gender_tag';
+$handler->display->display_options['fields']['field_gender_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_gender_tag']['element_type'] = 'div';
+$handler->display->display_options['fields']['field_gender_tag']['element_class'] = 'fix-width-10';
+$handler->display->display_options['fields']['field_gender_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_gender_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Government */
+$handler->display->display_options['fields']['field_government']['id'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['table'] = 'field_data_field_government';
+$handler->display->display_options['fields']['field_government']['field'] = 'field_government';
+$handler->display->display_options['fields']['field_government']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_government']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_government']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Name of organisation */
+$handler->display->display_options['fields']['field_organisation']['id'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['table'] = 'field_data_field_organisation';
+$handler->display->display_options['fields']['field_organisation']['field'] = 'field_organisation';
+$handler->display->display_options['fields']['field_organisation']['label'] = 'Organisation';
+$handler->display->display_options['fields']['field_organisation']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_organisation']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_organisation']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+$handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_2']['label'] = 'Nominating government/organisation';
+$handler->display->display_options['fields']['nothing_2']['alter']['text'] = '[field_government][field_organisation]';
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality1_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_nationality2_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Nationality(ies)';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_nationality1_tag]
+[field_nationality2_tag] ';
+$handler->display->display_options['fields']['nothing']['element_type'] = 'div';
+$handler->display->display_options['fields']['nothing']['element_class'] = 'fix-width-20';
+/* Field: Field: Decision */
+$handler->display->display_options['fields']['field_decision']['id'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['table'] = 'field_data_field_decision';
+$handler->display->display_options['fields']['field_decision']['field'] = 'field_decision';
+$handler->display->display_options['fields']['field_decision']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_decision']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+$handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_1']['field'] = 'name';
+$handler->display->display_options['fields']['name_1']['relationship'] = 'field_nationality1_tag_tid';
+$handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_1']['alter']['alter_text'] = TRUE;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name_2']['id'] = 'name_2';
+$handler->display->display_options['fields']['name_2']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name_2']['field'] = 'name';
+$handler->display->display_options['fields']['name_2']['relationship'] = 'field_nationality2_tag_tid';
+$handler->display->display_options['fields']['name_2']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name_2']['alter']['alter_text'] = TRUE;
+/* Field: Content: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['label'] = '';
+$handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+/* Field: Field: Deliverable */
+$handler->display->display_options['fields']['field_deliverable']['id'] = 'field_deliverable';
+$handler->display->display_options['fields']['field_deliverable']['table'] = 'field_data_field_deliverable';
+$handler->display->display_options['fields']['field_deliverable']['field'] = 'field_deliverable';
+$handler->display->display_options['fields']['field_deliverable']['label'] = '';
+$handler->display->display_options['fields']['field_deliverable']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_deliverable']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_deliverable']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_deliverable']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_deliverable']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_deliverable']['delta_offset'] = '0';
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Taxonomy term: Name */
+$handler->display->display_options['sorts']['name']['id'] = 'name';
+$handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['sorts']['name']['field'] = 'name';
+$handler->display->display_options['sorts']['name']['relationship'] = 'field_deliverable_tid_1';
+/* Sort criterion: Field: Last name (field_last_name) */
+$handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['relationship'] = 'profile';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'individual' => 'individual',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine_1']['id'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['table'] = 'views';
+$handler->display->display_options['filters']['combine_1']['field'] = 'combine';
+$handler->display->display_options['filters']['combine_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine_1']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine_1']['expose']['operator_id'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['label'] = 'Search by nationality';
+$handler->display->display_options['filters']['combine_1']['expose']['operator'] = 'combine_1_op';
+$handler->display->display_options['filters']['combine_1']['expose']['identifier'] = 'combine_1';
+$handler->display->display_options['filters']['combine_1']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+);
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine_1']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine_1']['fields'] = array(
+  'name_1' => 'name_1',
+  'name_2' => 'name_2',
+);
+/* Filter criterion: Field: Decision (field_decision) */
+$handler->display->display_options['filters']['field_decision_tid']['id'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['table'] = 'field_data_field_decision';
+$handler->display->display_options['filters']['field_decision_tid']['field'] = 'field_decision_tid';
+$handler->display->display_options['filters']['field_decision_tid']['value'] = array(
+  858 => '858',
+);
+$handler->display->display_options['filters']['field_decision_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_decision_tid']['vocabulary'] = 'ipbes_selection_options';
+/* Filter criterion: Content: Role (field_role_eva) */
+$handler->display->display_options['filters']['field_role_eva_target_id']['id'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['table'] = 'field_data_field_role_eva';
+$handler->display->display_options['filters']['field_role_eva_target_id']['field'] = 'field_role_eva_target_id';
+$handler->display->display_options['filters']['field_role_eva_target_id']['value'] = array(
+  324 => '324',
+);
+$handler->display->display_options['inherit_panels_path'] = '1';

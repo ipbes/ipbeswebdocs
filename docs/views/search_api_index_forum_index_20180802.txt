@@ -1,0 +1,310 @@
+$view = new view();
+$view->name = 'forum_index';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'search_api_index_forum_index';
+$view->human_name = 'IPBES Forum Index';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+$handler->display->display_options['exposed_form']['options']['bef'] = array(
+  'general' => array(
+    'input_required' => 0,
+    'text_input_required' => array(
+      'text_input_required' => array(
+        'value' => 'Select any filter and click on Apply to see results',
+        'format' => 'basic',
+      ),
+    ),
+    'allow_secondary' => 0,
+    'secondary_label' => 'Advanced options',
+    'secondary_collapse_override' => '0',
+  ),
+  'field_harmony_category' => array(
+    'bef_format' => 'default',
+    'more_options' => array(
+      'bef_select_all_none' => FALSE,
+      'bef_collapsible' => 0,
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+  'search_api_views_fulltext' => array(
+    'bef_format' => 'default',
+    'more_options' => array(
+      'autosubmit' => 0,
+      'is_secondary' => 0,
+      'any_label' => '',
+      'bef_filter_description' => '',
+      'tokens' => array(
+        'available' => array(
+          0 => 'global_types',
+        ),
+      ),
+      'rewrite' => array(
+        'filter_rewrite_values' => '',
+      ),
+    ),
+  ),
+);
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'harmony_table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'pinned' => 'pinned',
+  'title' => 'title',
+  'field_harmony_category' => 'field_harmony_category',
+  'field_harmony_post_count' => 'field_harmony_post_count',
+  'views' => 'views',
+  'likes' => 'likes',
+  'updated' => 'updated',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'pinned' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'title' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'field_harmony_category' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'field_harmony_post_count' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'views' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'likes' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+  'updated' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'cell_class' => '',
+    'meta_field' => 0,
+  ),
+);
+/* Header: Global: Harmony listing header */
+$handler->display->display_options['header']['harmony_listing_header']['id'] = 'harmony_listing_header';
+$handler->display->display_options['header']['harmony_listing_header']['table'] = 'views';
+$handler->display->display_options['header']['harmony_listing_header']['field'] = 'harmony_listing_header';
+/* No results behavior: Global: Text area */
+$handler->display->display_options['empty']['area']['id'] = 'area';
+$handler->display->display_options['empty']['area']['table'] = 'views';
+$handler->display->display_options['empty']['area']['field'] = 'area';
+$handler->display->display_options['empty']['area']['empty'] = TRUE;
+$handler->display->display_options['empty']['area']['content'] = 'There is currently no post or you do not have access to this category';
+$handler->display->display_options['empty']['area']['format'] = 'html';
+/* Relationship: Indexed Thread: Author */
+$handler->display->display_options['relationships']['uid']['id'] = 'uid';
+$handler->display->display_options['relationships']['uid']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['relationships']['uid']['field'] = 'uid';
+/* Field: Indexed Thread: Pinned */
+$handler->display->display_options['fields']['pinned']['id'] = 'pinned';
+$handler->display->display_options['fields']['pinned']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['pinned']['field'] = 'pinned';
+$handler->display->display_options['fields']['pinned']['label'] = '';
+$handler->display->display_options['fields']['pinned']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['pinned']['alter']['text'] = '<span class="harmony-pinned">[pinned]</span>';
+$handler->display->display_options['fields']['pinned']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['pinned']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['pinned']['empty_zero'] = TRUE;
+$handler->display->display_options['fields']['pinned']['type'] = 'custom';
+$handler->display->display_options['fields']['pinned']['type_custom_true'] = 'Pinned';
+$handler->display->display_options['fields']['pinned']['not'] = 0;
+$handler->display->display_options['fields']['pinned']['link_to_entity'] = 0;
+/* Field: Indexed Thread: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['link_to_entity'] = 1;
+/* Field: Indexed Thread: Category */
+$handler->display->display_options['fields']['field_harmony_category']['id'] = 'field_harmony_category';
+$handler->display->display_options['fields']['field_harmony_category']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['field_harmony_category']['field'] = 'field_harmony_category';
+$handler->display->display_options['fields']['field_harmony_category']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['field_harmony_category']['view_mode'] = 'full';
+$handler->display->display_options['fields']['field_harmony_category']['bypass_access'] = 0;
+/* Field: Indexed Thread: Post count */
+$handler->display->display_options['fields']['field_harmony_post_count']['id'] = 'field_harmony_post_count';
+$handler->display->display_options['fields']['field_harmony_post_count']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['field_harmony_post_count']['field'] = 'field_harmony_post_count';
+$handler->display->display_options['fields']['field_harmony_post_count']['label'] = 'Posts';
+$handler->display->display_options['fields']['field_harmony_post_count']['settings'] = array(
+  'thousand_separator' => '',
+  'prefix_suffix' => 1,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Indexed Thread: Views */
+$handler->display->display_options['fields']['views']['id'] = 'views';
+$handler->display->display_options['fields']['views']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['views']['field'] = 'views';
+$handler->display->display_options['fields']['views']['link_to_entity'] = 0;
+/* Field: Indexed Thread: Likes */
+$handler->display->display_options['fields']['likes']['id'] = 'likes';
+$handler->display->display_options['fields']['likes']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['likes']['field'] = 'likes';
+$handler->display->display_options['fields']['likes']['link_to_entity'] = 0;
+/* Field: Indexed Thread: Date updated */
+$handler->display->display_options['fields']['updated']['id'] = 'updated';
+$handler->display->display_options['fields']['updated']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['fields']['updated']['field'] = 'updated';
+$handler->display->display_options['fields']['updated']['label'] = 'Updated';
+$handler->display->display_options['fields']['updated']['date_format'] = 'short';
+$handler->display->display_options['fields']['updated']['second_date_format'] = 'iso_8601_date';
+$handler->display->display_options['fields']['updated']['timezone'] = 'Europe/Amsterdam';
+$handler->display->display_options['fields']['updated']['link_to_entity'] = 0;
+/* Contextual filter: Indexed Thread: Category */
+$handler->display->display_options['arguments']['field_harmony_category']['id'] = 'field_harmony_category';
+$handler->display->display_options['arguments']['field_harmony_category']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['arguments']['field_harmony_category']['field'] = 'field_harmony_category';
+$handler->display->display_options['arguments']['field_harmony_category']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['field_harmony_category']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_harmony_category']['specify_validation'] = TRUE;
+$handler->display->display_options['arguments']['field_harmony_category']['validate']['type'] = 'taxonomy_term';
+$handler->display->display_options['arguments']['field_harmony_category']['validate_options']['vocabularies'] = array(
+  'harmony_category' => 'harmony_category',
+);
+$handler->display->display_options['arguments']['field_harmony_category']['break_phrase'] = 0;
+$handler->display->display_options['arguments']['field_harmony_category']['not'] = 0;
+/* Filter criterion: Indexed Thread: Category */
+$handler->display->display_options['filters']['field_harmony_category']['id'] = 'field_harmony_category';
+$handler->display->display_options['filters']['field_harmony_category']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['filters']['field_harmony_category']['field'] = 'field_harmony_category';
+$handler->display->display_options['filters']['field_harmony_category']['value'] = array();
+$handler->display->display_options['filters']['field_harmony_category']['group'] = 1;
+$handler->display->display_options['filters']['field_harmony_category']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_harmony_category']['expose']['operator_id'] = 'field_harmony_category_op';
+$handler->display->display_options['filters']['field_harmony_category']['expose']['label'] = 'Category';
+$handler->display->display_options['filters']['field_harmony_category']['expose']['operator'] = 'field_harmony_category_op';
+$handler->display->display_options['filters']['field_harmony_category']['expose']['identifier'] = 'field_harmony_category';
+$handler->display->display_options['filters']['field_harmony_category']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['field_harmony_category']['expose']['reduce'] = 0;
+/* Filter criterion: Search: Fulltext search */
+$handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
+$handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_forum_index';
+$handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
+$handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+$handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
+$handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
+$handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
+$handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search';
+$handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
+$handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
+$handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+);
+$handler->display->display_options['filters']['search_api_views_fulltext']['fields'] = array(
+  'field_tags:name' => 'field_tags:name',
+  'posts:title' => 'posts:title',
+  'title' => 'title',
+);
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+
+/* Display: Content pane */
+$handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');

@@ -1,0 +1,601 @@
+$view = new view();
+$view->name = 'user_account_profile_page';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'users';
+$view->human_name = 'User account profile page';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'My Catalogue';
+$handler->display->display_options['css_class'] = 'user-picture';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: User: Picture */
+$handler->display->display_options['fields']['picture']['id'] = 'picture';
+$handler->display->display_options['fields']['picture']['table'] = 'users';
+$handler->display->display_options['fields']['picture']['field'] = 'picture';
+$handler->display->display_options['fields']['picture']['relationship'] = 'user';
+$handler->display->display_options['fields']['picture']['label'] = '';
+$handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['picture']['empty'] = '<img src="/sites/default/files/pictures/default_profile_image.png"/>';
+$handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
+$handler->display->display_options['fields']['picture']['image_style'] = 'large';
+/* Contextual filter: User: Uid */
+$handler->display->display_options['arguments']['uid']['id'] = 'uid';
+$handler->display->display_options['arguments']['uid']['table'] = 'users';
+$handler->display->display_options['arguments']['uid']['field'] = 'uid';
+$handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+$handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+$handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Field: Tools and instruments (field_tools_and_instruments_eva) */
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['id'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['field'] = 'field_tools_and_instruments_eva_target_id';
+
+/* Display: User picture on account pages */
+$handler = $view->new_display('entity_view', 'User picture on account pages', 'entity_view_1');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: User: Picture */
+$handler->display->display_options['fields']['picture']['id'] = 'picture';
+$handler->display->display_options['fields']['picture']['table'] = 'users';
+$handler->display->display_options['fields']['picture']['field'] = 'picture';
+$handler->display->display_options['fields']['picture']['relationship'] = 'user';
+$handler->display->display_options['fields']['picture']['label'] = '';
+$handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['picture']['empty'] = '<img src="/sites/default/files/pictures/default_profile_image.png"/>';
+$handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
+$handler->display->display_options['fields']['picture']['image_style'] = 'square_thumbnail';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Edit profile link  */
+$handler = $view->new_display('entity_view', 'Edit profile link ', 'entity_view_2');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'views_access_callback';
+$handler->display->display_options['access']['views_access_callback'] = 'custom_functions_user_has_access';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'user';
+$handler->display->display_options['fields']['uid']['label'] = '';
+$handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['text'] = 'Edit your profile';
+$handler->display->display_options['fields']['uid']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['uid']['alter']['path'] = '/user/[uid]/edit/main?destination=user/[uid]';
+$handler->display->display_options['fields']['uid']['alter']['link_class'] = 'btn-primary';
+$handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+/* Field: User: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'users';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['relationship'] = 'user';
+$handler->display->display_options['fields']['edit_node']['label'] = '';
+$handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+$handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['edit_node']['alter']['text'] = 'Edit your profile';
+$handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['edit_node']['alter']['path'] = '/user/[uid]/edit';
+$handler->display->display_options['fields']['edit_node']['alter']['link_class'] = 'btn-primary';
+$handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: User: Uid */
+$handler->display->display_options['arguments']['uid']['id'] = 'uid';
+$handler->display->display_options['arguments']['uid']['table'] = 'users';
+$handler->display->display_options['arguments']['uid']['field'] = 'uid';
+$handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+$handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+$handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Case studies tab */
+$handler = $view->new_display('entity_view', 'Case studies tab', 'entity_view_3');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  3 => '3',
+  8 => '8',
+);
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['id'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['table'] = 'users';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['field'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Search Users (field_search_users_accounts) */
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['id'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['field'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['operator'] = 'not empty';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'case_study' => 'case_study',
+);
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Tools tab */
+$handler = $view->new_display('entity_view', 'Tools tab', 'entity_view_4');
+$handler->display->display_options['enabled'] = FALSE;
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Field: Tools and instruments */
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['id'] = 'field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['field'] = 'field_tools_and_instruments_eva';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['label'] = '';
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 1,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_tools_and_instruments_eva']['delta_offset'] = '0';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Field: Tools and instruments (field_tools_and_instruments_eva) */
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['id'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['table'] = 'field_data_field_tools_and_instruments_eva';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['field'] = 'field_tools_and_instruments_eva_target_id';
+$handler->display->display_options['filters']['field_tools_and_instruments_eva_target_id']['operator'] = 'not empty';
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: My Catalogue */
+$handler = $view->new_display('entity_view', 'My Catalogue', 'entity_view_5');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  3 => '3',
+);
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['style_options']['grouping'] = array(
+  0 => array(
+    'field' => 'type',
+    'rendered' => 1,
+    'rendered_strip' => 0,
+  ),
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: User: Content authored */
+$handler->display->display_options['relationships']['uid']['id'] = 'uid';
+$handler->display->display_options['relationships']['uid']['table'] = 'users';
+$handler->display->display_options['relationships']['uid']['field'] = 'uid';
+$handler->display->display_options['relationships']['uid']['relationship'] = 'user';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'uid';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Content: Type */
+$handler->display->display_options['fields']['type']['id'] = 'type';
+$handler->display->display_options['fields']['type']['table'] = 'node';
+$handler->display->display_options['fields']['type']['field'] = 'type';
+$handler->display->display_options['fields']['type']['relationship'] = 'uid';
+$handler->display->display_options['fields']['type']['label'] = '';
+$handler->display->display_options['fields']['type']['exclude'] = TRUE;
+$handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['sorts'] = FALSE;
+/* Sort criterion: Content: Title */
+$handler->display->display_options['sorts']['title']['id'] = 'title';
+$handler->display->display_options['sorts']['title']['table'] = 'node';
+$handler->display->display_options['sorts']['title']['field'] = 'title';
+$handler->display->display_options['sorts']['title']['relationship'] = 'uid';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'uid';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'assessment' => 'assessment',
+  'case_study' => 'case_study',
+  'training_guidance' => 'training_guidance',
+  'toolsinstruments' => 'toolsinstruments',
+);
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Tool tab new */
+$handler = $view->new_display('entity_view', 'Tool tab new', 'entity_view_6');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['group_by'] = FALSE;
+$handler->display->display_options['group_by'] = TRUE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  3 => '3',
+  8 => '8',
+);
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Entity Reference: Referencing entity */
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['id'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['table'] = 'users';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['field'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['relationships']['reverse_field_search_users_accounts_node']['relationship'] = 'user';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Search Users (field_search_users_accounts) */
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['id'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['field'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['filters']['field_search_users_accounts_target_id']['operator'] = 'not empty';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_search_users_accounts_node';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'toolsinstruments' => 'toolsinstruments',
+);
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Send message link  */
+$handler = $view->new_display('entity_view', 'Send message link ', 'entity_view_7');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Privatemsg: Send Privatemsg link */
+$handler->display->display_options['fields']['privatemsg_link']['id'] = 'privatemsg_link';
+$handler->display->display_options['fields']['privatemsg_link']['table'] = 'users';
+$handler->display->display_options['fields']['privatemsg_link']['field'] = 'privatemsg_link';
+$handler->display->display_options['fields']['privatemsg_link']['label'] = '';
+$handler->display->display_options['fields']['privatemsg_link']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['privatemsg_link']['return'] = 1;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: User: Uid */
+$handler->display->display_options['arguments']['uid']['id'] = 'uid';
+$handler->display->display_options['arguments']['uid']['table'] = 'users';
+$handler->display->display_options['arguments']['uid']['field'] = 'uid';
+$handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+$handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+$handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: User picture on harmony forum */
+$handler = $view->new_display('entity_view', 'User picture on harmony forum', 'entity_view_8');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: User: Picture */
+$handler->display->display_options['fields']['picture']['id'] = 'picture';
+$handler->display->display_options['fields']['picture']['table'] = 'users';
+$handler->display->display_options['fields']['picture']['field'] = 'picture';
+$handler->display->display_options['fields']['picture']['relationship'] = 'user';
+$handler->display->display_options['fields']['picture']['label'] = '';
+$handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['picture']['empty'] = '<img src="/sites/default/files/pictures/default_profile_image.png"/>';
+$handler->display->display_options['fields']['picture']['image_style'] = 'square_thumbnail';
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['label'] = '';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['label'] = '';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = '';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_first_name] [field_last_name]';
+$handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+$handler->display->display_options['entity_type'] = 'user';
+$handler->display->display_options['bundles'] = array(
+  0 => 'user',
+);
+
+/* Display: Main profile restricted fields */
+$handler = $view->new_display('entity_view', 'Main profile restricted fields', 'entity_view_9');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['enabled'] = FALSE;
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['defaults']['access'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  2 => '2',
+);
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Profile: User uid */
+$handler->display->display_options['relationships']['user']['id'] = 'user';
+$handler->display->display_options['relationships']['user']['table'] = 'profile';
+$handler->display->display_options['relationships']['user']['field'] = 'user';
+/* Relationship: User: Profile */
+$handler->display->display_options['relationships']['profile']['id'] = 'profile';
+$handler->display->display_options['relationships']['profile']['table'] = 'users';
+$handler->display->display_options['relationships']['profile']['field'] = 'profile';
+$handler->display->display_options['relationships']['profile']['relationship'] = 'user';
+$handler->display->display_options['relationships']['profile']['bundle_types'] = array(
+  'main' => 'main',
+);
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Field: Personal Twitter Handle */
+$handler->display->display_options['fields']['field_social_twitter_personal']['id'] = 'field_social_twitter_personal';
+$handler->display->display_options['fields']['field_social_twitter_personal']['table'] = 'field_data_field_social_twitter_personal';
+$handler->display->display_options['fields']['field_social_twitter_personal']['field'] = 'field_social_twitter_personal';
+$handler->display->display_options['fields']['field_social_twitter_personal']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_social_twitter_personal']['element_class'] = 'field field-label-inline';
+$handler->display->display_options['fields']['field_social_twitter_personal']['element_label_type'] = 'strong';
+$handler->display->display_options['fields']['field_social_twitter_personal']['element_label_class'] = 'field-label';
+$handler->display->display_options['fields']['field_social_twitter_personal']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_social_twitter_personal']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Employer Twitter Handle */
+$handler->display->display_options['fields']['field_social_twitter_employer']['id'] = 'field_social_twitter_employer';
+$handler->display->display_options['fields']['field_social_twitter_employer']['table'] = 'field_data_field_social_twitter_employer';
+$handler->display->display_options['fields']['field_social_twitter_employer']['field'] = 'field_social_twitter_employer';
+$handler->display->display_options['fields']['field_social_twitter_employer']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_social_twitter_employer']['element_class'] = 'field';
+$handler->display->display_options['fields']['field_social_twitter_employer']['element_label_type'] = 'strong';
+$handler->display->display_options['fields']['field_social_twitter_employer']['element_label_class'] = 'field-label';
+$handler->display->display_options['fields']['field_social_twitter_employer']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_social_twitter_employer']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_social_twitter_employer']['delta_offset'] = '0';
+/* Field: Field: Facebook */
+$handler->display->display_options['fields']['field_social_facebook']['id'] = 'field_social_facebook';
+$handler->display->display_options['fields']['field_social_facebook']['table'] = 'field_data_field_social_facebook';
+$handler->display->display_options['fields']['field_social_facebook']['field'] = 'field_social_facebook';
+$handler->display->display_options['fields']['field_social_facebook']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_social_facebook']['element_class'] = 'field';
+$handler->display->display_options['fields']['field_social_facebook']['element_label_type'] = 'strong';
+$handler->display->display_options['fields']['field_social_facebook']['element_label_class'] = 'field-label';
+$handler->display->display_options['fields']['field_social_facebook']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_social_facebook']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_social_facebook']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Linkedin */
+$handler->display->display_options['fields']['field_social_linkedin']['id'] = 'field_social_linkedin';
+$handler->display->display_options['fields']['field_social_linkedin']['table'] = 'field_data_field_social_linkedin';
+$handler->display->display_options['fields']['field_social_linkedin']['field'] = 'field_social_linkedin';
+$handler->display->display_options['fields']['field_social_linkedin']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_social_linkedin']['element_class'] = 'field';
+$handler->display->display_options['fields']['field_social_linkedin']['element_label_type'] = 'strong';
+$handler->display->display_options['fields']['field_social_linkedin']['element_label_class'] = 'field-label';
+$handler->display->display_options['fields']['field_social_linkedin']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_social_linkedin']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_social_linkedin']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: CV/Resume */
+$handler->display->display_options['fields']['field_cv_resume']['id'] = 'field_cv_resume';
+$handler->display->display_options['fields']['field_cv_resume']['table'] = 'field_data_field_cv_resume';
+$handler->display->display_options['fields']['field_cv_resume']['field'] = 'field_cv_resume';
+$handler->display->display_options['fields']['field_cv_resume']['relationship'] = 'profile';
+$handler->display->display_options['fields']['field_cv_resume']['element_class'] = 'field';
+$handler->display->display_options['fields']['field_cv_resume']['element_label_type'] = 'strong';
+$handler->display->display_options['fields']['field_cv_resume']['element_label_class'] = 'field-label';
+$handler->display->display_options['fields']['field_cv_resume']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_cv_resume']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_cv_resume']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+$handler->display->display_options['entity_type'] = 'profile2';
+$handler->display->display_options['bundles'] = array(
+  0 => 'main',
+);

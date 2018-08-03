@@ -1,0 +1,831 @@
+$view = new view();
+$view->name = 'administration_profile';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Administration Profile';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Administration Profile';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'role';
+$handler->display->display_options['access']['role'] = array(
+  3 => '3',
+  7 => '7',
+);
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '30';
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'title' => 'title',
+  'nid' => 'nid',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'nothing' => 'nothing',
+  'field_un_index' => 'field_un_index',
+  'field_swiss_card_number' => 'field_swiss_card_number',
+  'field_date_of_birth' => 'field_date_of_birth',
+  'field_nationality1_tag' => 'field_nationality1_tag',
+  'field_nationality2_tag' => 'field_nationality2_tag',
+  'nothing_1' => 'nothing_1',
+  'field_airport_code' => 'field_airport_code',
+  'field_search_users_accounts2' => 'field_search_users_accounts2',
+  'views_bulk_operations' => 'views_bulk_operations',
+);
+$handler->display->display_options['style_options']['default'] = 'field_last_name';
+$handler->display->display_options['style_options']['info'] = array(
+  'title' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nid' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_first_name' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_last_name' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_un_index' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_swiss_card_number' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_date_of_birth' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality1_tag' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_nationality2_tag' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing_1' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_airport_code' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_search_users_accounts2' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'views_bulk_operations' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+/* Header: Global: Text area */
+$handler->display->display_options['header']['area']['id'] = 'area';
+$handler->display->display_options['header']['area']['table'] = 'views';
+$handler->display->display_options['header']['area']['field'] = 'area';
+$handler->display->display_options['header']['area']['empty'] = TRUE;
+$handler->display->display_options['header']['area']['content'] = '+++ <a href="https://www.ipbes.net/node/add/administration-profile?destination=/admin/ipbesusers/adminprofiles"> Create new profile</a>';
+$handler->display->display_options['header']['area']['format'] = 'basic';
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['id'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['relationships']['field_search_users_accounts_target_id']['field'] = 'field_search_users_accounts_target_id';
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Full Name';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_last_name] [field_first_name]';
+$handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nothing']['alter']['path'] = '/node/[nid]/edit?destination=/admin/ipbesusers/adminprofiles';
+/* Field: Content: UN Index */
+$handler->display->display_options['fields']['field_un_index']['id'] = 'field_un_index';
+$handler->display->display_options['fields']['field_un_index']['table'] = 'field_data_field_un_index';
+$handler->display->display_options['fields']['field_un_index']['field'] = 'field_un_index';
+$handler->display->display_options['fields']['field_un_index']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Swiss card number */
+$handler->display->display_options['fields']['field_swiss_card_number']['id'] = 'field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['table'] = 'field_data_field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['field'] = 'field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Passport Number */
+$handler->display->display_options['fields']['field_passport_number']['id'] = 'field_passport_number';
+$handler->display->display_options['fields']['field_passport_number']['table'] = 'field_data_field_passport_number';
+$handler->display->display_options['fields']['field_passport_number']['field'] = 'field_passport_number';
+$handler->display->display_options['fields']['field_passport_number']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Date of Birth */
+$handler->display->display_options['fields']['field_date_of_birth']['id'] = 'field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['table'] = 'field_data_field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['field'] = 'field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['settings'] = array(
+  'format_type' => 'iso_8601_date',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Nationality';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_nationality1_tag] [field_nationality2_tag]';
+/* Field: Content: Airport code */
+$handler->display->display_options['fields']['field_airport_code']['id'] = 'field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['table'] = 'field_data_field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['field'] = 'field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_airport_code']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Search Users 2 */
+$handler->display->display_options['fields']['field_search_users_accounts2']['id'] = 'field_search_users_accounts2';
+$handler->display->display_options['fields']['field_search_users_accounts2']['table'] = 'field_data_field_search_users_accounts2';
+$handler->display->display_options['fields']['field_search_users_accounts2']['field'] = 'field_search_users_accounts2';
+$handler->display->display_options['fields']['field_search_users_accounts2']['label'] = 'Linked user';
+$handler->display->display_options['fields']['field_search_users_accounts2']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Bulk operations: Content */
+$handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+  'action::views_bulk_operations_delete_item' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 0,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'log' => 0,
+    ),
+  ),
+);
+/* Sort criterion: Field: Last name (field_last_name) */
+$handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+$handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'administration_profile' => 'administration_profile',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name or username';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+  29 => 0,
+  30 => 0,
+  31 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'title' => 'title',
+  'nid' => 'nid',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'field_search_users_accounts2' => 'field_search_users_accounts2',
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'administration_profile' => 'administration_profile',
+);
+/* Filter criterion: Global: Combine fields filter */
+$handler->display->display_options['filters']['combine']['id'] = 'combine';
+$handler->display->display_options['filters']['combine']['table'] = 'views';
+$handler->display->display_options['filters']['combine']['field'] = 'combine';
+$handler->display->display_options['filters']['combine']['operator'] = 'contains';
+$handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+$handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name/username/UN Index';
+$handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+$handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+$handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+  2 => '2',
+  4 => 0,
+  3 => 0,
+  7 => 0,
+  8 => 0,
+  5 => 0,
+  20 => 0,
+  6 => 0,
+  22 => 0,
+  24 => 0,
+  19 => 0,
+  1 => 0,
+  21 => 0,
+  9 => 0,
+  10 => 0,
+  11 => 0,
+  12 => 0,
+  14 => 0,
+  15 => 0,
+  16 => 0,
+  17 => 0,
+  13 => 0,
+  18 => 0,
+  23 => 0,
+  25 => 0,
+  26 => 0,
+  27 => 0,
+  29 => 0,
+  30 => 0,
+  31 => 0,
+);
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['combine']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['combine']['fields'] = array(
+  'title' => 'title',
+  'nid' => 'nid',
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'field_un_index' => 'field_un_index',
+  'field_search_users_accounts2' => 'field_search_users_accounts2',
+);
+$handler->display->display_options['path'] = 'admin/ipbesusers/adminprofiles';
+$handler->display->display_options['menu']['type'] = 'normal';
+$handler->display->display_options['menu']['title'] = 'Administration profile';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'management';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
+
+/* Display: Entity Reference */
+$handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'entityreference_style';
+$handler->display->display_options['style_options']['search_fields'] = array(
+  'field_first_name' => 'field_first_name',
+  'field_last_name' => 'field_last_name',
+  'nid' => 'nid',
+  'nothing' => 0,
+);
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'entityreference_fields';
+$handler->display->display_options['row_options']['inline'] = array(
+  'field_last_name' => 'field_last_name',
+  'field_first_name' => 'field_first_name',
+  'nid' => 'nid',
+);
+$handler->display->display_options['row_options']['separator'] = '';
+$handler->display->display_options['row_options']['hide_empty'] = TRUE;
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['label'] = '';
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['label'] = '';
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+
+/* Display: Data export */
+$handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+$handler->display->display_options['style_options']['provide_file'] = 1;
+$handler->display->display_options['style_options']['filename'] = 'administration_profiles.csv';
+$handler->display->display_options['style_options']['parent_sort'] = 0;
+$handler->display->display_options['style_options']['quote'] = 1;
+$handler->display->display_options['style_options']['trim'] = 0;
+$handler->display->display_options['style_options']['replace_newlines'] = 0;
+$handler->display->display_options['style_options']['newline_token'] = '1';
+$handler->display->display_options['style_options']['header'] = 1;
+$handler->display->display_options['style_options']['keep_html'] = 0;
+$handler->display->display_options['style_options']['encoding'] = 'utf8_decode';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+/* Field: Field: First Name */
+$handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+$handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+$handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_first_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Last name */
+$handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+$handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+$handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_last_name']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Full Name';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_first_name] [field_last_name]';
+$handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['nothing']['alter']['path'] = '/node/[nid]/edit?destination=/admin/ipbesusers/adminprofiles';
+/* Field: Content: UN Index */
+$handler->display->display_options['fields']['field_un_index']['id'] = 'field_un_index';
+$handler->display->display_options['fields']['field_un_index']['table'] = 'field_data_field_un_index';
+$handler->display->display_options['fields']['field_un_index']['field'] = 'field_un_index';
+$handler->display->display_options['fields']['field_un_index']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Swiss card number */
+$handler->display->display_options['fields']['field_swiss_card_number']['id'] = 'field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['table'] = 'field_data_field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['field'] = 'field_swiss_card_number';
+$handler->display->display_options['fields']['field_swiss_card_number']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Content: Search Users */
+$handler->display->display_options['fields']['field_search_users_accounts']['id'] = 'field_search_users_accounts';
+$handler->display->display_options['fields']['field_search_users_accounts']['table'] = 'field_data_field_search_users_accounts';
+$handler->display->display_options['fields']['field_search_users_accounts']['field'] = 'field_search_users_accounts';
+$handler->display->display_options['fields']['field_search_users_accounts']['label'] = 'Linked user';
+$handler->display->display_options['fields']['field_search_users_accounts']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 1,
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+$handler->display->display_options['fields']['field_search_users_accounts']['delta_offset'] = '0';
+/* Field: Field: Date of Birth */
+$handler->display->display_options['fields']['field_date_of_birth']['id'] = 'field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['table'] = 'field_data_field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['field'] = 'field_date_of_birth';
+$handler->display->display_options['fields']['field_date_of_birth']['settings'] = array(
+  'format_type' => 'iso_8601_date',
+  'custom_date_format' => '',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+  'show_repeat_rule' => 'show',
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 1 */
+$handler->display->display_options['fields']['field_nationality1_tag']['id'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['table'] = 'field_data_field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['field'] = 'field_nationality1_tag';
+$handler->display->display_options['fields']['field_nationality1_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality1_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality1_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Field: Nationality 2 */
+$handler->display->display_options['fields']['field_nationality2_tag']['id'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['table'] = 'field_data_field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['field'] = 'field_nationality2_tag';
+$handler->display->display_options['fields']['field_nationality2_tag']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_nationality2_tag']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_nationality2_tag']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Nationality';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_nationality1_tag] [field_nationality2_tag]';
+/* Field: Content: Airport code */
+$handler->display->display_options['fields']['field_airport_code']['id'] = 'field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['table'] = 'field_data_field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['field'] = 'field_airport_code';
+$handler->display->display_options['fields']['field_airport_code']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_airport_code']['settings'] = array(
+  'linked_field' => array(
+    'linked' => 0,
+    'destination' => '',
+    'advanced' => array(
+      'title' => '',
+      'target' => '',
+      'class' => '',
+      'rel' => '',
+      'text' => '',
+    ),
+  ),
+);
+/* Field: User: Uid */
+$handler->display->display_options['fields']['uid']['id'] = 'uid';
+$handler->display->display_options['fields']['uid']['table'] = 'users';
+$handler->display->display_options['fields']['uid']['field'] = 'uid';
+$handler->display->display_options['fields']['uid']['relationship'] = 'field_search_users_accounts_target_id';
+$handler->display->display_options['path'] = 'admin/adminprofiles';
+$handler->display->display_options['displays'] = array(
+  'page' => 'page',
+  'default' => 0,
+);
+$handler->display->display_options['use_batch'] = 'batch';
+$handler->display->display_options['segment_size'] = '100';
