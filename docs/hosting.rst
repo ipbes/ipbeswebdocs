@@ -1,6 +1,6 @@
 Web hosting
 ===========
-The IPBES website is hosted on Pantheon_. The advantage of this are:
+The IPBES website is hosted on Pantheon_. The advantages of this are:
 - Git workflow
 - Daily backup
 - Staging environments
