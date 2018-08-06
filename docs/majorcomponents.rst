@@ -6,9 +6,9 @@ Menu
 
 Main menu
 ~~~~~~~~~
-Main menu:
+Main menu::
 
-  www.ipbes.net/
+   www.ipbes.net/
       about/
       areas of work/
       Work Programme
@@ -151,6 +151,7 @@ Main menu:
          E-learning
          Glossary
          Supporting material & e-appendices assessments
+
 
 User menu
 ~~~~~~~~~~
