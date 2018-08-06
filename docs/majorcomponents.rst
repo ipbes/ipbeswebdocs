@@ -6,8 +6,9 @@ Menu
 
 Main menu
 ~~~~~~~~~
-Main menu::
-   www.ipbes.net/
+Main menu:
+
+  www.ipbes.net/
       about/
       areas of work/
       Work Programme
