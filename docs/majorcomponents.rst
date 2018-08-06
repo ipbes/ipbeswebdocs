@@ -9,9 +9,6 @@ Main menu
 Main menu::
 
    www.ipbes.net/
-      about/
-      areas of work/
-      Work Programme
       About/
          Members and Observers
          Observer organisations
