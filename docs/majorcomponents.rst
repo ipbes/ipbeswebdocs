@@ -153,7 +153,12 @@ Main menu::
 
 User menu
 ~~~~~~~~~~
-User menu
+User menu::
+
+   www.ipbes.net/
+      My account/ (dashboard with user account, profile, form submissions, roles)
+      Messages (private messages sent to and by user)
+      Log out
 
 Policy support menu
 ~~~~~~~~~~~~~~~~~~~
