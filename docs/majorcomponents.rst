@@ -114,8 +114,9 @@ Main menu::
            Values Task Force Members
       Catalogue of assessments
            Catalogue of Assessments
-      Policy support tools
-         Policy Support Catalogue
+      Policy support tools [disabled] (taxonomy)
+      Policy support tools and methodologies
+      Policy Support Catalogue
            About
            Search [disabled]
            Policy instruments [disabled]
