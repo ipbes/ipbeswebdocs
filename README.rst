@@ -1,4 +1,4 @@
-# ipbeswebdocs ipbes-docs.readthedocs.io/en
+# ipbeswebdocs www.ipbes-docs.readthedocs.io
 
 Read the documentation
 ===========================
