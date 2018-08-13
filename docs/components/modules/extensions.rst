@@ -1,88 +1,89 @@
 Additional modules
 ~~~~~~~~~~~~~~~~~~
-module | machine | version | description_full
-Address Field Tokens | addressfield_tokens | 7.x-1.11 | Creates tokens for address fields, adds new addressfield renders, and adds webform integration.
-Address Field | addressfield | 7.x-1.2 | Manage a flexible address field, implementing the xNAL standard.
-Better Formats | better_formats | 7.x-1.0-beta2 | Enhances the core input format system by managing input format defaults and settings.
-Block Class | block_class | 7.x-2.3 | Allows assigning CSS classes to blocks.
-Browscap | browscap | 7.x-2.3 | Provides a replacement for PHPs get_browser() function.
-CAPTCHA | captcha | 7.x-1.5 | Base CAPTCHA module for adding challenges to arbitrary forms.
-Chain Menu Access API | chain_menu_access | 7.x-2.0 | Helps client modules to chain their access callbacks into other modules' menu items.
-Chosen | chosen | 7.x-2.1 | Makes select elements more user-friendly using Chosen.
-CKEditor | ckeditor | 7.x-1.18 | Enables CKEditor (WYSIWYG HTML editor) for use instead of plain text fields.
-Colors | colors | 7.x-1.0-rc1 | API for coloring selectors.
-Conditional Fields | conditional_fields | 7.x-3.0-alpha2 | Define dependencies between fields based on their states and values.
-Custom Functions | custom_functions |  | Custom functions used on IPBES, eg: profile edit tab, Real name title on user pages;
-Date iCal | date_ical | 7.x-3.9 | Enables export of iCal feeds using Views, and import of iCal feeds using Feeds.
-Display Suite | ds | 7.x-2.16 | Extend the display options for every entity type.
-Email | email | 7.x-1.3 | Defines an email field type.
-Entity Quote | entity_quote | 7.x-1.x-dev | Allows users to quote entities.
-Entity reference prepopulate | entityreference_prepopulate | 7.x-1.7 | Prepopulate entity reference values from URL.
-Entityforms | entityform | 7.x-2.0-rc4 | Provides fieldable entity forms
-Eva | eva | 7.x-1.4 | Provides a Views display type that can be attached to entities.
-Feeds Tamper | feeds_tamper | 7.x-1.2 | Modify feeds data before it gets saved.
-Field formatter settings API | field_formatter_settings | 7.x-1.1 | Provides missing alter hooks for field formatter settings and summaries
-Field Permissions | field_permissions | 7.x-1.0 | Set field-level permissions to create, update or view fields.
-Filter permissions | filter_perms | 7.x-1.0 | Provides role and module filters to simplify the user permissions page.
-Flag | flag | 7.x-3.9 | Create customized flags that users can set on entities.
-FlexSlider | flexslider | 7.x-2.0-rc2 | Integrate the FlexSlider 2 library with Drupal
-Font Awesome | font-awesome | 7.x-2.9 | Iconic font designed for use with Twitter Bootstrap.
-Form block | formblock | 7.x-1.0-alpha1 | Enables the presentation of node creation forms in blocks. This is particularly useful for including forms on panels.
-FullCalendar | fullcalendar | 7.x-2.0 | Provides a views style plugin for FullCalendar
-Geocoder | geocoder | 7.x-1.3 | An API and widget to geocode various known data into other GIS data types.
-Geofield | geofield | 7.x-2.3 | Stores geographic and location data (points, lines, and polygons).
-GeoJSON | views_geojson |  | Provides a Views feed style for GeoJSON output.
-Google Analytics | google_analytics | 7.x-2.5 | Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.
-Harmony - Access | harmony_access | 7.x-1.0-alpha1 | Restrict access to forums, threads and posts.
-Harmony - Access | harmony_access | 7.x-1.0-alpha2 | Restrict access to forums, threads and posts.
-Harmony - Core | harmony_core | 7.x-1.0-alpha10+3-dev | Provides core functionality for Harmony!
-Harmony - Forum Access | harmony_forum_access |  | A faster (more performant) way to restrict access by forum category. Please read the README file to understand why this is different to harmony_access.
-Harmony - Moderation | harmony_moderation | 7.x-1.x-dev | Provides flags for abuse and white-listing posts.
-Harmony - Search | harmony_search | 7.x-1.x-dev | Integrates Harmony Entities with Search.
-Honeypot | honeypot | 7.x-1.24 | Mitigates spam form submissions using the honeypot method.
-Inline Entity Form | inline_entity_form | 7.x-1.8 | Provides a widget for inline management (creation, modification, removal) of referenced entities.
-IP Geolocation Views & Maps | ip_geoloc | 7.x-1.30 | Display Google, Leaflet and OpenLayers2 maps of Views containing locations of visitors and/or nodes. Marker color differentiation. Centering options, e.g. visitor's HTML5-retrieved current position. Also an API for location-based services.
-Linked Field | linked_field | 7.x-1.10 | Adds the functionality to link fields to a specific destination.
-Machine name | machine_name | 7.x-1.0 | Provides a machine name field.
-MailChimp | mailchimp | 7.x-4.9 | MailChimp email service integration.
-Masquerade | masquerade | 7.x-1.0-rc7 | This module allows permitted users to masquerade as other users.
-Media Feeds | media_feeds | 7.x-2.0-alpha1 | Enable mapping imported sources to media fields.
-Message notify | message_notify | 7.x-2.5 | Message notify.
-Message | message | 7.x-1.12 | A general message logging utility.
-One Click Upload | ocupload | 7.x-2.1 | Simple file uploads to BUEditor, CKEditor and textareas.
-Organic groups subgroups | og_subgroups |  | Enable the permission system to be aware of the group hierarchy.
-Paragraphs | paragraphs | 7.x-1.0-rc5 | Paragraphs module to control your content flow.
-Placeholder | placeholder | 7.x-1.1 | Add support for the HTML5 placeholder attribute, with backward browser compatibility.
-Private messages | privatemsg | 7.x-1.4 | Allow private messages between users.
-Publish Content | publishcontent | 7.x-1.4 | Adds a 'Publish' or 'Unpublish' link on the node edit/view pages, and a 'Publish Link' field if the Views module is enabled.
-Redirect | redirect | 7.x-1.8 | Allows users to redirect from old URLs to new URLs.
-Redirect | redirect | 7.x-1.0-rc3 | Allows users to redirect from old URLs to new URLs.
-Rules Condition: Node unpublished | rcnu | 7.x-1.0 | Custom condition for Rules Module: detect, if is node unpublished.
-Scheduler | scheduler | 7.x-1.5 | This module allows nodes to be published and unpublished on specified dates and time.
-Search API AZ Glossary | search_api_glossary | 7.x-2.2 | Creates a glossary fields (A B C ...) based on node titles and user names
-Short Scale formatter | short_scale_formatter | 7.x-1.1 | Provides a formatter for integer fields which abbreviates numbers with the short scale number suffix.
-SMTP Authentication Support | smtp | 7.x-1.7 | Allow for site emails to be sent through an SMTP server of your choice.
-Taxonomy Access Control Lite | tac_lite | 7.x-1.2 | Simple access control based on categories.
-Taxonomy display | taxonomy_display | 7.x-1.1 | Modify the display of taxonomy term pages per vocabulary.
-Taxonomy Manager | taxonomy_manager | 7.x-1.0 | Tool for administrating taxonomy terms.
-Term Merge | term_merge | 7.x-1.4 | This module allows you to merge multiple terms into one, while updating all fields referring to those terms to refer to the replacement term instead.
-Token tweaks | token_tweaks | 7.x-1.x-dev | Allows administrators to disable token types or tokens to improve performance using the token tree.
-Track da files | track_da_files | 7.x-1.9 | Track datas about displayed files.
-Transliteration | transliteration | 7.x-3.2 | Converts non-latin text to US-ASCII and sanitizes file names.
-Video Embed Field | video_embed_field | 7.x-2.0-beta11 | Expose a field type for embedding videos from youtube or vimeo.
-Viewfield | viewfield | 7.x-2.1 | Defines a field type to display a view.
-Views Access Callback | views_access_callback | 7.x-1.0-beta1 | Provides callback-based access control for Views.
-Views Aggregator Plus | views_aggregator | 7.x-1.4 | A Views plugin that operates on the results after the database query has run, thus offering aggregation functions not otherwise possible.
-Views Data Export | views_data_export | 7.x-3.2 | Plugin to export views data into various file formats
-Views Load More | views_load_more | 7.x-1.5 | A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.
-Webform multiple file | webform_multiple_file | 7.x-1.0-beta4 | Adds a new component to webform to allow multiple file uploads.
-Webform Rules | webform_rules | 7.x-1.6 | Adds rules integration for webform submissions.
-Webform Validation | webform_validation | 7.x-1.14 | Add validation rules to Webforms.
-Webform | webform | 7.x-4.17 | Enables the creation of forms and questionnaires.
-Workbench Access | workbench_access | 7.x-1.5 | Extensible editorial access for the Workbench suite.
-WYSIWYG Filter | wysiwyg_filter | 7.x-1.6-rc9 | Provides an input filter that allows site administrators configure which HTML elements, attributes and style properties are allowed.
-XML sitemap | xmlsitemap | 7.x-2.4 | Creates an XML sitemap conforming to the sitemaps.org protocol.
-Leaflet Markercluster | leaflet_markercluster | 7.x-1.4 | Extend Leaflet with the Markercluster library
-Leaflet More Maps | leaflet_more_maps |  | Adds a swag of map styles to Leaflet, e.g Thunderforest, Esri, MapBox
-Leaflet | leaflet | 7.x-1.4 | Integration with the Leaflet map scripting library.
-Views Linker | views_linker | 7.x-1.2 | Adds an option to navigate back to a filtered Views listing after clicking through to a result item.
+- module | machine | version | description_full
+- Address Field Tokens | addressfield_tokens | 7.x-1.11 | Creates tokens for address fields, adds new addressfield renders, and adds webform integration.
+- Address Field | addressfield | 7.x-1.2 | Manage a flexible address field, implementing the xNAL standard.
+- Better Formats | better_formats | 7.x-1.0-beta2 | Enhances the core input format system by managing input format defaults and settings.
+- Block Class | block_class | 7.x-2.3 | Allows assigning CSS classes to blocks.
+- Browscap | browscap | 7.x-2.3 | Provides a replacement for PHPs get_browser() function.
+- CAPTCHA | captcha | 7.x-1.5 | Base CAPTCHA module for adding challenges to arbitrary forms.
+- Chain Menu Access API | chain_menu_access | 7.x-2.0 | Helps client modules to chain their access callbacks into other modules' menu items.
+- Chosen | chosen | 7.x-2.1 | Makes select elements more user-friendly using Chosen.
+- CKEditor | ckeditor | 7.x-1.18 | Enables CKEditor (WYSIWYG HTML editor) for use instead of plain text fields.
+- Colors | colors | 7.x-1.0-rc1 | API for coloring selectors.
+- Conditional Fields | conditional_fields | 7.x-3.0-alpha2 | Define dependencies between fields based on their states and values.
+- Custom Functions | custom_functions |  | Custom functions used on IPBES, eg: profile edit tab, Real name title on user pages;
+- Date iCal | date_ical | 7.x-3.9 | Enables export of iCal feeds using Views, and import of iCal feeds using Feeds.
+- Display Suite | ds | 7.x-2.16 | Extend the display options for every entity type.
+- Email | email | 7.x-1.3 | Defines an email field type.
+- Entity Quote | entity_quote | 7.x-1.x-dev | Allows users to quote entities.
+- Entity reference prepopulate | entityreference_prepopulate | 7.x-1.7 | Prepopulate entity reference values from URL.
+- Entityforms | entityform | 7.x-2.0-rc4 | Provides fieldable entity forms
+- Eva | eva | 7.x-1.4 | Provides a Views display type that can be attached to entities.
+- Feeds Tamper | feeds_tamper | 7.x-1.2 | Modify feeds data before it gets saved.
+- Field formatter settings API | field_formatter_settings | 7.x-1.1 | Provides missing alter hooks for field formatter settings and summaries
+- Field Permissions | field_permissions | 7.x-1.0 | Set field-level permissions to create, update or view fields.
+- Filter permissions | filter_perms | 7.x-1.0 | Provides role and module filters to simplify the user permissions page.
+- Flag | flag | 7.x-3.9 | Create customized flags that users can set on entities.
+- FlexSlider | flexslider | 7.x-2.0-rc2 | Integrate the FlexSlider 2 library with Drupal
+- Font Awesome | font-awesome | 7.x-2.9 | Iconic font designed for use with Twitter Bootstrap.
+- Form block | formblock | 7.x-1.0-alpha1 | Enables the presentation of node creation forms in blocks. This is particularly useful for including forms on panels.
+- FullCalendar | fullcalendar | 7.x-2.0 | Provides a views style plugin for FullCalendar
+- Geocoder | geocoder | 7.x-1.3 | An API and widget to geocode various known data into other GIS data types.
+- Geofield | geofield | 7.x-2.3 | Stores geographic and location data (points, lines, and polygons).
+- GeoJSON | views_geojson |  | Provides a Views feed style for GeoJSON output.
+- Google Analytics | google_analytics | 7.x-2.5 | Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.
+- Harmony - Access | harmony_access | 7.x-1.0-alpha1 | Restrict access to forums, threads and posts.
+- Harmony - Access | harmony_access | 7.x-1.0-alpha2 | Restrict access to forums, threads and posts.
+- Harmony - Core | harmony_core | 7.x-1.0-alpha10+3-dev | Provides core functionality for Harmony!
+- Harmony - Forum Access | harmony_forum_access |  | A faster (more performant) way to restrict access by forum category. Please read the README file to understand why this is different to harmony_access.
+- Harmony - Moderation | harmony_moderation | 7.x-1.x-dev | Provides flags for abuse and white-listing posts.
+- Harmony - Search | harmony_search | 7.x-1.x-dev | Integrates Harmony Entities with Search.
+- Honeypot | honeypot | 7.x-1.24 | Mitigates spam form submissions using the honeypot method.
+- Inline Entity Form | inline_entity_form | 7.x-1.8 | Provides a widget for inline management (creation, modification, removal) of referenced entities.
+- IP Geolocation Views & Maps | ip_geoloc | 7.x-1.30 | Display Google, Leaflet and OpenLayers2 maps of Views containing locations of visitors and/or nodes. Marker color differentiation. Centering options, e.g. visitor's HTML5-retrieved current position. Also an API for location-based services.
+- Linked Field | linked_field | 7.x-1.10 | Adds the functionality to link fields to a specific destination.
+- Machine name | machine_name | 7.x-1.0 | Provides a machine name field.
+- MailChimp | mailchimp | 7.x-4.9 | MailChimp email service integration.
+- Masquerade | masquerade | 7.x-1.0-rc7 | This module allows permitted users to masquerade as other users.
+- Media Feeds | media_feeds | 7.x-2.0-alpha1 | Enable mapping imported sources to media fields.
+- Message notify | message_notify | 7.x-2.5 | Message notify.
+- Message | message | 7.x-1.12 | A general message logging utility.
+- One Click Upload | ocupload | 7.x-2.1 | Simple file uploads to BUEditor, CKEditor and textareas.
+- Organic groups subgroups | og_subgroups |  | Enable the permission system to be aware of the group hierarchy.
+- Paragraphs | paragraphs | 7.x-1.0-rc5 | Paragraphs module to control your content flow.
+- Placeholder | placeholder | 7.x-1.1 | Add support for the HTML5 placeholder attribute, with backward browser compatibility.
+- Private messages | privatemsg | 7.x-1.4 | Allow private messages between users.
+- Publish Content | publishcontent | 7.x-1.4 | Adds a 'Publish' or 'Unpublish' link on the node edit/view pages, and a 'Publish Link' field if the Views module is enabled.
+- Redirect | redirect | 7.x-1.8 | Allows users to redirect from old URLs to new URLs.
+- Redirect | redirect | 7.x-1.0-rc3 | Allows users to redirect from old URLs to new URLs.
+- Rules Condition: Node unpublished | rcnu | 7.x-1.0 | Custom condition for Rules Module: detect, if is node unpublished.
+- Scheduler | scheduler | 7.x-1.5 | This module allows nodes to be published and unpublished on specified dates and time.
+- Search API AZ Glossary | search_api_glossary | 7.x-2.2 | Creates a glossary fields (A B C ...) based on node titles and user names
+- Short Scale formatter | short_scale_formatter | 7.x-1.1 | Provides a formatter for integer fields which abbreviates numbers with the short scale number suffix.
+- SMTP Authentication Support | smtp | 7.x-1.7 | Allow for site emails to be sent through an SMTP server of your choice.
+- Taxonomy Access Control Lite | tac_lite | 7.x-1.2 | Simple access control based on categories.
+- Taxonomy display | taxonomy_display | 7.x-1.1 | Modify the display of taxonomy term pages per vocabulary.
+- Taxonomy Manager | taxonomy_manager | 7.x-1.0 | Tool for administrating taxonomy terms.
+- Term Merge | term_merge | 7.x-1.4 | This module allows you to merge multiple terms into one, while updating all fields referring to those terms to refer to the replacement term instead.
+- Token tweaks | token_tweaks | 7.x-1.x-dev | Allows administrators to disable token types or tokens to improve performance using the token tree.
+- Track da files | track_da_files | 7.x-1.9 | Track datas about displayed files.
+- Transliteration | transliteration | 7.x-3.2 | Converts non-latin text to US-ASCII and sanitizes file names.
+- Video Embed Field | video_embed_field | 7.x-2.0-beta11 | Expose a field type for embedding videos from youtube or vimeo.
+- Viewfield | viewfield | 7.x-2.1 | Defines a field type to display a view.
+- Views Access Callback | views_access_callback | 7.x-1.0-beta1 | Provides callback-based access control for Views.
+- Views Aggregator Plus | views_aggregator | 7.x-1.4 | A Views plugin that operates on the results after the database query has run, thus offering aggregation functions not otherwise possible.
+- Views Data Export | views_data_export | 7.x-3.2 | Plugin to export views data into various file formats
+- Views Load More | views_load_more | 7.x-1.5 | A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.
+- Webform multiple file | webform_multiple_file | 7.x-1.0-beta4 | Adds a new component to webform to allow multiple file uploads.
+- Webform Rules | webform_rules | 7.x-1.6 | Adds rules integration for webform submissions.
+- Webform Validation | webform_validation | 7.x-1.14 | Add validation rules to Webforms.
+- Webform | webform | 7.x-4.17 | Enables the creation of forms and questionnaires.
+- Workbench Access | workbench_access | 7.x-1.5 | Extensible editorial access for the Workbench suite.
+- WYSIWYG Filter | wysiwyg_filter | 7.x-1.6-rc9 | Provides an input filter that allows site administrators configure which HTML elements, attributes and style properties are allowed.
+- XML sitemap | xmlsitemap | 7.x-2.4 | Creates an XML sitemap conforming to the sitemaps.org protocol.
+- Leaflet Markercluster | leaflet_markercluster | 7.x-1.4 | Extend Leaflet with the Markercluster library
+- Leaflet More Maps | leaflet_more_maps |  | Adds a swag of map styles to Leaflet, e.g Thunderforest, Esri, MapBox
+- Leaflet | leaflet | 7.x-1.4 | Integration with the Leaflet map scripting library.
+- Views Linker | views_linker | 7.x-1.2 | Adds an option to navigate back to a filtered Views listing after clicking through to a result item.
+
