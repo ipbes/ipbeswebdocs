@@ -1,1 +1,3 @@
-.. include:: ../CONTRIBUTING.rst
+
+.. toctree::
+   :maxdepth: 1
