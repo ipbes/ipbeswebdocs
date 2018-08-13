@@ -1,6 +1,7 @@
 Account Access and Setup
 ------------------------
 An account can be created by visiting https://www.ipbes.net/user/register and entering required information. The following information is requested at the time of registration: username, e-mail address, salutation, first name, middle name, last name, job title, affiliation, about,mailing list subscription, and security question.  Once account's are created, users can log into their accounts to provide additional information.
+
 .. image:: images/account_register.png
    :alt: User profile page.
 
