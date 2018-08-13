@@ -6,6 +6,6 @@ Modules
    :maxdepth: 1
 
    Core modules <core>
-   DKAN <datastore>
+   DKAN <dkan>
    Extensions <extensions>
    Custom <custom>   
