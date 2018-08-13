@@ -11,7 +11,7 @@ Taxonomy vocabularies
    Menu <menu>
    Content Types <content-types>
    Taxonomy vocabularies <taxonomy-vocabularies>
-   Modules <modules>
+   Modules modules/index
 
 .. _ipbes website: https://www.ipbes.net
 .. _policy support: https://www.ipbes.net/policy-support
