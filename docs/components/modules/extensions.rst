@@ -1,6 +1,7 @@
 Additional modules
 ~~~~~~~~~~~~~~~~~~
-module | machine | version | description_full
+- module | machine | version | description_full
+
 - Address Field Tokens | addressfield_tokens | 7.x-1.11 | Creates tokens for address fields, adds new addressfield renders, and adds webform integration.
 - Address Field | addressfield | 7.x-1.2 | Manage a flexible address field, implementing the xNAL standard.
 - Better Formats | better_formats | 7.x-1.0-beta2 | Enhances the core input format system by managing input format defaults and settings.
