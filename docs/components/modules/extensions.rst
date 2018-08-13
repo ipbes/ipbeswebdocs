@@ -1,6 +1,6 @@
 Additional modules
 ~~~~~~~~~~~~~~~~~~
-- module | machine | version | description_full
+module | machine | version | description_full
 - Address Field Tokens | addressfield_tokens | 7.x-1.11 | Creates tokens for address fields, adds new addressfield renders, and adds webform integration.
 - Address Field | addressfield | 7.x-1.2 | Manage a flexible address field, implementing the xNAL standard.
 - Better Formats | better_formats | 7.x-1.0-beta2 | Enhances the core input format system by managing input format defaults and settings.
@@ -42,6 +42,9 @@ Additional modules
 - Honeypot | honeypot | 7.x-1.24 | Mitigates spam form submissions using the honeypot method.
 - Inline Entity Form | inline_entity_form | 7.x-1.8 | Provides a widget for inline management (creation, modification, removal) of referenced entities.
 - IP Geolocation Views & Maps | ip_geoloc | 7.x-1.30 | Display Google, Leaflet and OpenLayers2 maps of Views containing locations of visitors and/or nodes. Marker color differentiation. Centering options, e.g. visitor's HTML5-retrieved current position. Also an API for location-based services.
+- Leaflet Markercluster | leaflet_markercluster | 7.x-1.4 | Extend Leaflet with the Markercluster library
+- Leaflet More Maps | leaflet_more_maps |  | Adds a swag of map styles to Leaflet, e.g Thunderforest, Esri, MapBox
+- Leaflet | leaflet | 7.x-1.4 | Integration with the Leaflet map scripting library.
 - Linked Field | linked_field | 7.x-1.10 | Adds the functionality to link fields to a specific destination.
 - Machine name | machine_name | 7.x-1.0 | Provides a machine name field.
 - MailChimp | mailchimp | 7.x-4.9 | MailChimp email service integration.
@@ -74,6 +77,7 @@ Additional modules
 - Views Access Callback | views_access_callback | 7.x-1.0-beta1 | Provides callback-based access control for Views.
 - Views Aggregator Plus | views_aggregator | 7.x-1.4 | A Views plugin that operates on the results after the database query has run, thus offering aggregation functions not otherwise possible.
 - Views Data Export | views_data_export | 7.x-3.2 | Plugin to export views data into various file formats
+- Views Linker | views_linker | 7.x-1.2 | Adds an option to navigate back to a filtered Views listing after clicking through to a result item.
 - Views Load More | views_load_more | 7.x-1.5 | A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.
 - Webform multiple file | webform_multiple_file | 7.x-1.0-beta4 | Adds a new component to webform to allow multiple file uploads.
 - Webform Rules | webform_rules | 7.x-1.6 | Adds rules integration for webform submissions.
@@ -82,8 +86,3 @@ Additional modules
 - Workbench Access | workbench_access | 7.x-1.5 | Extensible editorial access for the Workbench suite.
 - WYSIWYG Filter | wysiwyg_filter | 7.x-1.6-rc9 | Provides an input filter that allows site administrators configure which HTML elements, attributes and style properties are allowed.
 - XML sitemap | xmlsitemap | 7.x-2.4 | Creates an XML sitemap conforming to the sitemaps.org protocol.
-- Leaflet Markercluster | leaflet_markercluster | 7.x-1.4 | Extend Leaflet with the Markercluster library
-- Leaflet More Maps | leaflet_more_maps |  | Adds a swag of map styles to Leaflet, e.g Thunderforest, Esri, MapBox
-- Leaflet | leaflet | 7.x-1.4 | Integration with the Leaflet map scripting library.
-- Views Linker | views_linker | 7.x-1.2 | Adds an option to navigate back to a filtered Views listing after clicking through to a result item.
-
