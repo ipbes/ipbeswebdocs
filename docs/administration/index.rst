@@ -1,22 +1,11 @@
 Site administration
 ===================
-Content management
-------------------
-
-Taxonomy/Vocabulary management
----------------
-
-File management
----------------
-
-Form management
----------------
-Entity forms
-~~~~~~~~~~~~
-
-Webforms
-~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+
+   Content management <content>
+   Taxonomy/Vocabulary management <taxonomy>
+   File management <file>
+   Form management <form>
 
