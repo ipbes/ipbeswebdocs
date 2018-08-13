@@ -5,13 +5,6 @@ Content types
 Taxonomy vocabularies
 
 
-Content types
--------------
-List of content types and what they do
-
-Taxonomy vocabularies
----------------------
-
 .. toctree::
    :maxdepth: 1
    
