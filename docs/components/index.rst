@@ -174,6 +174,8 @@ List of content types and what they do
 taxonomy vocabularies
 ---------------------
 
+.. toctree::
+   :maxdepth: 1
 
 .. _ipbes website: https://www.ipbes.net
 .. _policy support: https://www.ipbes.net/policy-support
