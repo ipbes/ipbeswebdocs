@@ -10,5 +10,8 @@ The Pantheon workflow requires code to be committed to dev and pulled up to <tes
 
 .. image:: images/pantheon_workflow.png
    :alt: Pantheon code and database flows.
-  
+
+.. toctree::
+   :maxdepth: 1
+   
 .. _Pantheon: www.pantheon.io
