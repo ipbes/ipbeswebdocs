@@ -67,6 +67,9 @@ Once logged in, you will be able to create content on the website using forms th
 - Policy support_
 - Impact Tracking Database (TRACK)_
 
+.. toctree::
+   :maxdepth: 1
+   
 .. _Policy support: https://www.ipbes.net/policy-support/add-content
 .. _Impact Tracking Database (TRACK): https://www.ipbes.net/impact-tracking
 .. _Login: https://www.ipbes.net/user/login
