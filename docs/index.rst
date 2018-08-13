@@ -6,5 +6,11 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   *
+   components/index
+   installation/index
+   maintenance/index
+   administration/index
+   contributing/index
+   hosting/index
+   userguide/index
 
