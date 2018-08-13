@@ -19,3 +19,6 @@ An archive of views used on the IPBES website is made available here
 Check rules
 -----------
 -export and disable rules that are not in use
+
+.. toctree::
+   :maxdepth: 1
