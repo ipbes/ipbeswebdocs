@@ -1,4 +1,4 @@
-Account Access and Setup
+Account access and setup
 ------------------------
 An account can be created by visiting https://www.ipbes.net/user/register and entering required information. The following information is requested at the time of registration: username, e-mail address, salutation, first name, middle name, last name, job title, affiliation, about,mailing list subscription, and security question.  Once accounts are created, users can login to provide additional information. Account verification can take up to 48 hours.
 
