@@ -25,4 +25,4 @@ Use the login information provided to access the site and your profile. You'll s
 
 When you're done adding and editing content on the site, you'll want to make sure you log out to avoid security risks. You can log out from anywhere on the site by using either of the buttons shown in the picture below.
 
-Once you log out, you'll be taken back to the Home page of your DKAN site as if you were a general site visitor.
+Once you log out, you'll be taken back to the Home page of the site.
