@@ -2,7 +2,7 @@ Site administration
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Content management <content>
    Taxonomy/Vocabulary management <taxonomy>
