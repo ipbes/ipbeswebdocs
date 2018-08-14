@@ -36,9 +36,8 @@ Database design
 .. toctree::
    :maxdepth: 1
 
-   core
+   Drupal core updates <drupal-core>
    Pantheon updates <pantheon>
-   Drupal core updates <core>
    Contributed modules updates review <contrib>
    Check views <views>
    Check rules <rules>
