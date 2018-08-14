@@ -1,5 +1,5 @@
-Nodes list
-Taxonomy list
+- Nodes list
+- Taxonomy list
 
 .. toctree::
    :maxdepth: 1
