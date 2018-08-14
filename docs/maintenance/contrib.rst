@@ -1,13 +1,13 @@
 Contrib modules updates and review
-----------------------------------
+==================================
 Installing a module
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Updating a module
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Uninstalling a module using drush in SFTP mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 Better to use drush instead of git because drush will check to see dependencies of the module before uninstalling and prompt you to uninstall/check dependent modules.
  
