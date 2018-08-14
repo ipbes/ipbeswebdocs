@@ -1,6 +1,7 @@
 Welcome to IPBES website documentation!
 =======================================
 
+
    components/index
    installation/index
    maintenance/index
