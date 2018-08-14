@@ -11,7 +11,7 @@ Modules
 Views
 -----
 
-- Views can give negative impact in your site performance because of complex join query.
+- Views can give negative impact in your site performance because of complex join queries.
 - Enable views caching on pages or blocks that don't need to be updated in real time.
 - Simplify views e.g. by improving content type structures.
 - Remove utf8_decode from data export because it significantly slows down exports.
