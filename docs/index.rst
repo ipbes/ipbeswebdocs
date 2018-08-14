@@ -1,9 +1,5 @@
 Welcome to IPBES website documentation!
-==================================================
-Contents:
-
-.. toctree::
-   :maxdepth: 2
+=======================================
 
    components/index
    installation/index
@@ -12,4 +8,3 @@ Contents:
    contributing/index
    hosting/index
    userguide/index
-
