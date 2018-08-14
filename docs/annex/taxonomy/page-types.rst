@@ -1,0 +1,5 @@
+Page Types
+==========
+
+Events
+Partners

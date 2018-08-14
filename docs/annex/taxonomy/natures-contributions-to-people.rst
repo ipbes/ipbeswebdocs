@@ -1,0 +1,21 @@
+Natures Contributions To People
+===============================
+
+Energy
+Food and feed
+Formation, protection and decontamination of soils and sediments
+Habitat creation and maintenance
+Learning and inspiration
+Maintenance of options
+Materials and assistance
+Medicinal, biochemical and genetic resources
+Physical and psychological experiences
+Pollination and dispersal of seeds and other propagules
+Regulation of air quality
+Regulation of climate
+Regulation of freshwater and coastal water quality
+Regulation of freshwater quantity, location and timing
+Regulation of hazards and extreme events
+Regulation of ocean acidification
+Regulation of organisms detrimental to humans
+Supporting identities
