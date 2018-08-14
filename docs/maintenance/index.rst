@@ -18,7 +18,7 @@ Views
 Errors
 ------
 
-- resolve error logs. Pantheon provides developers direct access to numerous resources for debugging site execution problems, including slow site performance and PHP errors.
+- Resolve error logs. Pantheon provides developers direct access to numerous resources for debugging site execution problems, including slow site performance and PHP errors.
 - Debugging sites with log files, including how to retrieve them → https://pantheon.io/docs/logs/ 
 - Debugging slow performance → https://pantheon.io/docs/debug-slow-performance/ 
 - PHP errors and exceptions → https://pantheon.io/docs/php-errors/ 
