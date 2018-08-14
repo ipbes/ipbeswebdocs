@@ -1,8 +1,10 @@
 Major components
 ================
-Menu
-Content types
-Taxonomy vocabularies
+
+- Menu
+- Content types
+- Taxonomy vocabularies
+- Modules
 
 
 .. toctree::
