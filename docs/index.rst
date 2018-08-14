@@ -12,3 +12,4 @@ Contents:
    contributing/index
    hosting/index
    userguide/index
+   annex/index
