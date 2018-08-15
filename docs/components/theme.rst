@@ -6,7 +6,7 @@ Themes control the design, look and feel of the website using HTML, CSS, JavaScr
 The theme used is based on Radix which comes packaged with DKAN. Customisations have been done and a new theme (ipbes_new) has been built. The theme uses Gulp_ to compile Sass and check for errors in CSS. Gulp needs Node. This approach minifies the code to make it load fast while simplifying maintenance.
 
 Installation of theme
-~~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 1) Make sure you have Node and npm installed.
 You can read a guide on how to install node here: https://docs.npmjs.com/getting-started/installing-node
@@ -37,6 +37,25 @@ copied to the panthoen repository in the `sites/all/themes` folder::
 
     gulp dist
     
+Style guide   
+-----------
+Primary colours
+~~~~~~~~~~~~~~~~~~~
+Grey: #676b5e
+Teal: #0a8380
+- Teal 50%: #84c2c1;
+- Teal 33%: #aed6d6;
+- Teal 25%: #c2e0e0
+Green: #a5ae60
+Blue: #002e5e
+
+Secondary colours
+~~~~~~~~~~~~~~~~
+
+Footer: #81857a
+Purple: #562974
+Orange: #d6490c
+
     
 .. _Gulp: http://gulpjs.com
 .. _Yarn: https://yarnpkg.com
