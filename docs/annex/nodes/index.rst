@@ -12,7 +12,7 @@ Nodes
    Contact <contact>
    Country <country>
    Data Dashboard <data-dashboard>
-   Data Story <data-strory>
+   Data Story <data-story>
    Dataset <dataset>
    Decision <decision>
    Deliverable Event Pages <deliverable-event-pages>
