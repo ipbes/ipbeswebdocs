@@ -22,16 +22,16 @@ Nodes
    Events <events>
    Glossary <glossary>
    Group <group>
-   Group events <group-events>
-   Group posts <group-posts>
+   Group Events <group-events>
+   Group Posts <group-posts>
    Harvest Source <harvest-source>
    In Session Documents <in-session-documents>
    Indicators <indicators>
    Learning Opportunity <learning-opportunity>
    Media Watch <media-watch>
-   Methodological guidance <methodological-guidance>
+   Methodological Guidance <methodological-guidance>
    News <news>
-   Nomination calls <nomination-calls>
+   Nomination Calls <nomination-calls>
    Notifications <notifications>
    Organisation <organisation>
    Page <page>
