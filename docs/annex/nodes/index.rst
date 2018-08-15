@@ -16,6 +16,7 @@ Nodes
    Dataset <dataset>
    Decision <decision>
    Deliverable Event Pages <deliverable-event-pages>
+   Deliverable Partner Pages <deliverable-partner-pages>
    Deliverable Resources <deliverable-resources>
    Document Library Document <document-library-document>
    Draft Assessments <draft-assessments>
