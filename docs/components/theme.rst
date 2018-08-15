@@ -39,7 +39,8 @@ copied to the panthoen repository in the `sites/all/themes` folder::
     
 Style guide   
 -----------
-Check the colours here: http://www.color-hex.com/color/81857a
+.. image:: ../images/fonts-and-color-tones.jpg
+   :alt: Pantheon code and database flows.
 
 Primary colours
 ~~~~~~~~~~~~~~~~~~~
@@ -59,6 +60,7 @@ Secondary colours
 - Purple: #562974
 - Orange: #d6490c
 
+Check the colours here: http://www.color-hex.com/color/81857a
     
 .. _Gulp: http://gulpjs.com
 .. _Yarn: https://yarnpkg.com
