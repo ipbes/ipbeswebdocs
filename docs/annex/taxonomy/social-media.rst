@@ -1,7 +1,4 @@
 Social Media
 ============
 
-Facebook
-Instagram
-LinkedIn
-Twitter
+Facebook; Instagram; LinkedIn; Twitter

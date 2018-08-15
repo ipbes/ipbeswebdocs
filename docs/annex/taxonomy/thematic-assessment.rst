@@ -1,9 +1,5 @@
 Thematic Assessment++
 ===================
-Legacy. we do not need this anymore.
+Legacy. We do not need this anymore.
 
-(IAS)
-(LDR)
-IAS
-LDR
-SUB
+(IAS); (LDR); IAS; LDR; SUB

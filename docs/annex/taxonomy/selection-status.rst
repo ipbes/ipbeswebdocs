@@ -1,8 +1,4 @@
 Selection Status
 ================
 
-Alternate
-Nominee
-Reserve
-Retired
-Selected
+Alternate; Nominee; Reserve; Retired; Selected; 

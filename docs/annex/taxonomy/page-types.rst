@@ -1,5 +1,4 @@
 Page Types
 ==========
 
-Events
-Partners
+Events; Partners; 

@@ -1,42 +1,4 @@
 Partners
 ========
 
-BioTime
-BirdLife International
-Convention on Biological Diversity
-Convention on International Trade in Endangered Species of Wild Fauna and Flora
-Food and Agriculture Organisation of the United Nations
-Forest Stewardship Council
-Future Earth
-German Centre for Integrative Biodiversity Research
-Global Biodiversity Information Facility
-Global Footprint Network
-Indicators for the Seas programme (IndiSeas)
-Institute of Social Ecology at the Alpen Adria University in Vienna
-International Union for Conservation of Nature (IUCN)
-Marine Stewardship Council (MSC)
-Oppla
-Organization for Economic Cooperation and Development (OECD)
-Programme for the Endorsement of Forest Certification (PEFC)
-Projecting Responses of Ecological Diversity in Changing Terrestrial Systems (PREDICTS) collaborative project
-Sea Around Us research initiative
-Secretariat of the Convention on Biological Diversity (CBD)
-Terralingua, the Tropical Ecology Assessment and Monitoring (TEAM) network
-The Biodiversity Indicators Partnership
-The Commonwealth Scientific and Industrial Research Organization (CSIRO)
-The Food and Agriculture Organization of the United Nations (FAO)
-The Group on Earth Observations â€“ Biodiversity Observation Network
-The Map of Life
-The Netherlands Environmental Assessment Agency (PBL)
-The University of St. Andrews
-The World Bank
-The World Resources Institute (WRI)
-The World Wildlife Fund (WWF)
-The Yale Center for Environmental Law and Policy
-The Zoological Society of London (ZSL)
-UN Environment
-UN Environment World Conservation Monitoring Centre
-UNDP
-UNESCO
-United Nations Statistics Division
-Water Footprint Network
+BioTime; BirdLife International; Convention on Biological Diversity; Convention on International Trade in Endangered Species of Wild Fauna and Flora; Food and Agriculture Organisation of the United Nations; Forest Stewardship Council; Future Earth; German Centre for Integrative Biodiversity Research; Global Biodiversity Information Facility; Global Footprint Network; Indicators for the Seas programme (IndiSeas); Institute of Social Ecology at the Alpen Adria University in Vienna; International Union for Conservation of Nature (IUCN); Marine Stewardship Council (MSC); Oppla; Organization for Economic Cooperation and Development (OECD); Programme for the Endorsement of Forest Certification (PEFC); Projecting Responses of Ecological Diversity in Changing Terrestrial Systems (PREDICTS) collaborative project; Sea Around Us research initiative; Secretariat of the Convention on Biological Diversity (CBD); Terralingua, the Tropical Ecology Assessment and Monitoring (TEAM) network; The Biodiversity Indicators Partnership; The Commonwealth Scientific and Industrial Research Organization (CSIRO); The Food and Agriculture Organization of the United Nations (FAO); The Group on Earth Observations â€“ Biodiversity Observation Network; The Map of Life; The Netherlands Environmental Assessment Agency (PBL); The University of St. Andrews; The World Bank; The World Resources Institute (WRI); The World Wildlife Fund (WWF); The Yale Center for Environmental Law and Policy; The Zoological Society of London (ZSL); UN Environment; UN Environment World Conservation Monitoring Centre; UNDP; UNESCO; United Nations Statistics Division; Water Footprint Network

@@ -1,7 +1,5 @@
 Document Library Document Tags
 ==============================
 
-Agenda
-Finance
-secretariat
+Agenda; Finance; secretariat
 

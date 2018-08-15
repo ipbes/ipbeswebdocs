@@ -1,7 +1,4 @@
 Resources and Tools
 ===================
 
-Catalogue
-Citations
-Metadata catalogue
-Presentations
+Catalogue; Citations; Metadata catalogue; Presentations

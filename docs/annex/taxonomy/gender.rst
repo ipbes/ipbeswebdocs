@@ -1,7 +1,4 @@
 Gender
 ======
 
-Female
-Male
-Prefer not to disclose
-Transgender
+Female; Male; Prefer not to disclose; Transgender; 

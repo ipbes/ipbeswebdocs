@@ -1,6 +1,4 @@
 Type Of Product
 ===============
 
-
-- Policy instrument
-- Policy support tool
+Policy instrument; Policy support tool

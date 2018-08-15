@@ -1,9 +1,5 @@
 Strategic Partners
 ==================
 
-CBD
-CITES
-Future Earth
-GBIF
-UNEP-WCMC
+CBD; CITES; Future Earth; GBIF; UNEP-WCMC
 

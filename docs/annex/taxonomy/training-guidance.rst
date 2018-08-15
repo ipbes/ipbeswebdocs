@@ -1,7 +1,4 @@
 Training Guidance
 =================
 
-Document
-In-person
-Online
-Webinar
+Document; In-person; Online; Webinar

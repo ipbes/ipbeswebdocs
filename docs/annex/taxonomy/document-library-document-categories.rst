@@ -1,6 +1,4 @@
 Document Library Document Categories
 ====================================
 
-Addendum
-Corrigendum
-Revision
+Addendum; Corrigendum; Revision

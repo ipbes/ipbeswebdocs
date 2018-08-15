@@ -1,4 +1,4 @@
-Nomination Calls-
+Nomination Calls
 ================
 
 No terms added
