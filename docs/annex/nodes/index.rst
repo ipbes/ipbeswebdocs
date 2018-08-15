@@ -37,7 +37,7 @@ Nodes
    Page <page>
    Post <post>
    Publication <publication>
-   Resource <resources>
+   Resource <resource>
    Role <role>
    Slideshow <slideshow>
    Supporting Material <supporting-material>
