@@ -38,6 +38,6 @@ Database design
 
    Drupal core updates <drupal-core>
    Pantheon updates <pantheon>
-   Contributed modules updates review <contrib>
+   Contributed modules updates review <modules>
    Check views <views>
    Check rules <rules>
