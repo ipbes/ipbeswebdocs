@@ -1,5 +1,5 @@
-Updating and uninstalling modules using drush
-=============================================
+Review, update and uninstall modules using drush
+================================================
 It is better to use drush instead of git because drush will check to see dependencies of the module before uninstalling and prompt you to uninstall/check dependent modules.
  
 Requirements
