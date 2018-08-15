@@ -10,3 +10,11 @@ Nodes
    Capacity Building Projects <capacity-building-projects>
    Case study <case-study>
    Contact <contact>
+   Country <country>
+   Data Dashboard <data-dashboard>
+   Data Story <data-strory>
+   Dataset <dataset>
+   Decision <decision>
+   Deliverable event pages <deliverable-even-pages>
+   Deliverable resources <deliverable resources>
+   Document Library Document<document-library-document>
