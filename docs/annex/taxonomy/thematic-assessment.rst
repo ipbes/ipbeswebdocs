@@ -1,4 +1,4 @@
-Thematic Assessment++
+Thematic Assessment
 ===================
 Legacy. We do not need this anymore.
 
