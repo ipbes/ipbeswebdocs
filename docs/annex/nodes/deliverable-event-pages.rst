@@ -1,2 +1,2 @@
-Deliverable event pages
+Deliverable Event Pages
 =======================
