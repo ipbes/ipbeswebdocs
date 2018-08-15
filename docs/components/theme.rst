@@ -46,9 +46,11 @@ Primary colours
 
 - Grey: #676b5e
 - Teal: #0a8380
-- Teal 50%: #84c2c1;
+   
+   - Teal 50%: #84c2c1;
    - Teal 33%: #aed6d6;
    - Teal 25%: #c2e0e0
+   
 - Green: #a5ae60
 - Blue: #002e5e
 
