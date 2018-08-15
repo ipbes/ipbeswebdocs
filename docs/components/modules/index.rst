@@ -1,6 +1,8 @@
 Modules
 =======
 
+A Drupal module is a collection of files containing some functionality and is written in PHP. 
+
 		 
 .. toctree::
    :maxdepth: 1
