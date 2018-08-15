@@ -1,7 +1,9 @@
 Themes
 ======
 
-Themes are responsible for the appearance of the site. The theme used is based on Radix which comes packaged with DKAN. Customisations have been done and a new theme (ipbes_new) has been built. The theme uses Gulp_ to compile Sass and check for errors in CSS. Gulp needs Node. This approach minifies the code to make it load fast while simplifying maintenance.
+Themes control the design, look and feel of the website using HTML, CSS, JavaScript, and other front-end assets in order to implement a design for their site. Themes are used to change the HTML markup of anything in Drupal; Add CSS styles to change the layout, color, or typography on one or more pages; and Use JavaScript to enhance the user experience
+
+The theme used is based on Radix which comes packaged with DKAN. Customisations have been done and a new theme (ipbes_new) has been built. The theme uses Gulp_ to compile Sass and check for errors in CSS. Gulp needs Node. This approach minifies the code to make it load fast while simplifying maintenance.
 
 Installation of theme
 ~~~~~~~~~~~~~~~~~~~~~~
