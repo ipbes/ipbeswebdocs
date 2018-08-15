@@ -1,8 +1,14 @@
 Menu
-----
+====
+
+Used for navigation
+
+
+Administrative menu
+-------------------
 
 Main menu
-~~~~~~~~~
+---------
 Main menu::
 
    www.ipbes.net/
@@ -149,7 +155,7 @@ Main menu::
 
 
 User menu
-~~~~~~~~~~
+---------
 User menu::
 
    www.ipbes.net/
@@ -158,7 +164,7 @@ User menu::
       Log out
 
 Policy support menu
-~~~~~~~~~~~~~~~~~~~
+-------------------
 Policy support tools and instruments
 
 .. note:: The policy support catalogue structure is maintained by WCMC and OPPLA
