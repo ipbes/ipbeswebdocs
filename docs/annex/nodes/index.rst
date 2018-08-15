@@ -15,6 +15,6 @@ Nodes
    Data Story <data-strory>
    Dataset <dataset>
    Decision <decision>
-   Deliverable event pages <deliverable-even-pages>
-   Deliverable resources <deliverable resources>
-   Document library document <document-library-document>
+   Deliverable Event Pages <deliverable-event-pages>
+   Deliverable Resources <deliverable-resources>
+   Document Library Document <document-library-document>
