@@ -15,10 +15,10 @@ Connect
 -------
 - Follow @ipbes on Twitter_
 
-_Pull requests for theme: https://github.com/ipbes/webstyles
-_Pull requests for views: https://github.com/ipbes/ipbeswebdocs/tree/master/docs/views
-_Twitter: https://twitter.com/IPBES
 
+.. _Pull requests for theme: https://github.com/ipbes/webstyles
+.. _Pull requests for views: https://github.com/ipbes/ipbeswebdocs/tree/master/docs/views
+.. _Twitter: https://twitter.com/IPBES
 
 .. toctree::
    :maxdepth: 1
