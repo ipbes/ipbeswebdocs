@@ -4,7 +4,7 @@ Welcome to IPBES website documentation!
 This is documentation of technical issues relevant for developers and administrators of the IPBES website. 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    components/index
    installation/index
