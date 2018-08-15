@@ -39,22 +39,25 @@ copied to the panthoen repository in the `sites/all/themes` folder::
     
 Style guide   
 -----------
+Check the colours here: http://www.color-hex.com/color/81857a
+
 Primary colours
 ~~~~~~~~~~~~~~~~~~~
-Grey: #676b5e
-Teal: #0a8380
-- Teal 50%: #84c2c1;
-- Teal 33%: #aed6d6;
-- Teal 25%: #c2e0e0
-Green: #a5ae60
-Blue: #002e5e
+
+- Grey: #676b5e
+- Teal: #0a8380
+-- Teal 50%: #84c2c1;
+-- Teal 33%: #aed6d6;
+-- Teal 25%: #c2e0e0
+- Green: #a5ae60
+- Blue: #002e5e
 
 Secondary colours
 ~~~~~~~~~~~~~~~~
 
-Footer: #81857a
-Purple: #562974
-Orange: #d6490c
+- Greyish green: #81857a
+- Purple: #562974
+- Orange: #d6490c
 
     
 .. _Gulp: http://gulpjs.com
