@@ -17,4 +17,4 @@ Nodes
    Decision <decision>
    Deliverable event pages <deliverable-even-pages>
    Deliverable resources <deliverable resources>
-   Document Library Document<document-library-document>
+   Document library document <document-library-document>
