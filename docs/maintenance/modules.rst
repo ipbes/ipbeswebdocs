@@ -20,12 +20,15 @@ Preparation
 
 Steps for updating
 ------------------
+- check for modules that need to be updated on drupal: /admin/modules/update
 - Log into Pantheon and go to the dev environment
 - Switch development mode from git to SFTP
 - Go to terminal on Mac and change directory to the project folder e.g. cd ipbesnew
 - Type in the following command: drush @pantheon.ipbesnew.dev up [machine name of module]
-- Confirm that you wish to disable the module
+- Confirm that you wish to update the module
 - Go back to the pantheon dashboard and add a commit message
+- Test to see that the site is working fine on the DEV environment
+- Pull code upstream to live
 - Switch site back to git mode
 
 Steps for uninstalling
