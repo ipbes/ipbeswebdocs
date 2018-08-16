@@ -80,6 +80,7 @@ Content Types and node count for each on 16 August 2018
    Accredited Organisation <accredited-organization>
    Administration Profile <administration-profile>
    Assessment <assessment>
+   Assessment <assessment-IPBES>
    Capacity Building Projects <capacity-building-projects>
    Case study <case-study>
    Contact <contact>
