@@ -1,6 +1,6 @@
 Nodes
 =====
-
+Content Types and node count for each on 16 August 2018
 +----------------------------+-------+
 | Content Type               | Count |
 +----------------------------+-------+
