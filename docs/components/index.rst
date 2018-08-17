@@ -14,16 +14,6 @@ DKAN consists of of a distribution profile which manages the initial installatio
             contrib/ (3rd party module dependencies)
          themes/ (dkan themes)
 
-The modules and themes should not be updated or changed within the DKAN folder. All customizations, updates and patches need to be done within sites/all/.. directory::
-
-   sites/
-      all/
-         libraries/ (your libraries)
-         modules/ (your modules)
-            contrib/ (modules from Drupal)
-            custom/ (custom modules)
-         themes/ (your themes)
-
 
 .. toctree::
    :maxdepth: 1
