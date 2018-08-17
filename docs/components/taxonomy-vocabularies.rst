@@ -135,4 +135,4 @@ Taxonomy vocabularies and count of terms in each on 16 August 2018
 
 The taxonomy terms and details of each taxonomy vocabulary can be found here_ 
 
-.. _here: annex/taxonomy/index
+.. _here: /annex/taxonomy/index
