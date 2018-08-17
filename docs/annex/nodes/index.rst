@@ -35,10 +35,8 @@ Nodes
    News <news>
    Nomination Calls <nomination-calls>
    Notifications <notifications>
-   Organisation <organisation>
    Page <page>
    Post <post>
-   Publication <publication>
    Resource <resource>
    Role <role>
    Slideshow <slideshow>
