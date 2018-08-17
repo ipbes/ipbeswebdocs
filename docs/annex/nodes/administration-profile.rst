@@ -1,5 +1,14 @@
 Administration Profile
 ======================
+
+Use: Travel Plans
+
+Maintained by: Travel Assistant
+
+Create/Edit Permissions: Administrator, IPBES Admin
+
+Access: Administrator, IPBES Admin
+
 +------------------------+------------------------------+-----------------------+
 | FieldName              | Machinename                  | Type                  |
 +------------------------+------------------------------+-----------------------+
