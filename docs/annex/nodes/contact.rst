@@ -1,5 +1,13 @@
-Contact
+Account
 =======
+
+
+Maintained by: Account owner, Secretariat
+
+Create/Edit Permissions: authenticated user (owner)
+
+Access: Limited
+
 +--------------------------------+---------------------------------+--------------------------------------+
 | FieldName                      | Machinename                     | Type                                 |
 +--------------------------------+---------------------------------+--------------------------------------+
