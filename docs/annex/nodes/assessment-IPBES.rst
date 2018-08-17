@@ -1,5 +1,14 @@
 Assessment IPBES
 ================
+
+Use: Generates pages used by IPBES approved assessments
+
+Maintained by: Secretariat
+
+Create/Edit Permissions: Administrator, Secretariat
+
+Access: Public
+
 +---------------------+----------------------------------+-----------------------+
 | FieldName           | Machinename                      | Type                  |
 +---------------------+----------------------------------+-----------------------+
