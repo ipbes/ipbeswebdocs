@@ -1,3 +1,14 @@
 Pantheon updates
 ----------------
 
+1. Apply Upstream Updates via the Site Dashboard
+2. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
+
+.. image:: ../images/updates_apply-pantheon.png
+   :alt: Pantheon upstream updates.
+
+3. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to Git.
+4. Select whether you want to automatically resolve conflicts. Drupal users can opt to run update.php after updates are applied.
+5. Click Apply Updates.
+6. Click Visit Development Site in the Development Environment to test and QA the site.
+7. Follow the standard Pantheon Workflow to deploy changes up to Test and on to Live.
