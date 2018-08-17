@@ -1,5 +1,17 @@
 Additional modules
 ~~~~~~~~~~~~~~~~~~
+
+Additional modules added by IPBES to extend the functionality of Drupal and DKAN. All customizations, updates and patches of Drupal Core and DKAN modules need to be done within sites/all/.. directory. ::
+
+   sites/
+      all/
+         libraries/ (your libraries)
+         modules/ (your modules)
+            contrib/ (modules from Drupal)
+            custom/ (custom modules)
+         themes/ (your themes)
+
+
 +-----------------------------------+-----------------------------+-----------------------+-------------+
 | module                            | machine                     | version               | deactivated |
 +-----------------------------------+-----------------------------+-----------------------+-------------+
