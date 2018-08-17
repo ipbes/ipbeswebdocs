@@ -1,5 +1,8 @@
+Web and domain name hosting
+===========================
+
 Web hosting
-===========
+-----------
 The IPBES website is hosted on Pantheon_. The advantages of this are:
 
 - Git workflow
@@ -11,6 +14,11 @@ The Pantheon workflow requires code to be committed to dev and pulled up to <tes
 
 .. image:: ../images/hosting_pantheon_workflow.png
    :alt: Pantheon code and database flows.
+
+Domain name hosting
+-------------------
+The domain name services (DNS) are hosted by gandi.net
+
 
 .. toctree::
    :maxdepth: 1
