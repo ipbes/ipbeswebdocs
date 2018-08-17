@@ -133,4 +133,6 @@ Taxonomy vocabularies and count of terms in each on 16 August 2018
 | Webpage workflow                     | 2              |
 +--------------------------------------+----------------+
 
-The taxonomy terms and details of each taxonomy vocabulary can be found `here <https://ipbes-docs.readthedocs.io/en/latest/annex/taxonomy/index.html>`_ 
+The taxonomy terms and details of each taxonomy vocabulary can be found here_ 
+
+.. _here: ../annex/taxonomy/index
