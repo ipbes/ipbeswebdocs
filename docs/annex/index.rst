@@ -1,7 +1,5 @@
 Annex
 =====
-- Nodes list
-- Taxonomy list
 
 .. toctree::
    :maxdepth: 1
