@@ -77,3 +77,4 @@ Content Types and node count for each on 16 August 2018
 | Webform                    | 14    |
 +----------------------------+-------+
 
+Details about each content type can be found `here nodes/index`_ 
