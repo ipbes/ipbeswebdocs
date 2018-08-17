@@ -1,5 +1,14 @@
 Accredited Organizations
 ========================
+
+List of organizations that have been accredited by the Plenary to attend its sessions
+
+Administrator: Administrator, Secretariat
+
+Contributor: Secretariat
+
+Access: Public
+
 +------------------+------------------------+-----------------------+
 | FieldName        | Machinename            | Type                  |
 +------------------+------------------------+-----------------------+
