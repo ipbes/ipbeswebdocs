@@ -1,5 +1,10 @@
 Methodological Guidance
 =======================
+
+Use: Policy support portal
+
+Maintained by: UNEP-WCMC, TSU Values, TSU Scenarios
+
 +-----------------------+---------------------------------+-----------------------+
 | FieldName             | Machinename                     | Type                  |
 +-----------------------+---------------------------------+-----------------------+
