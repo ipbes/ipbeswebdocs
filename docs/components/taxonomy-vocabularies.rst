@@ -1,7 +1,9 @@
 Taxonomy vocabularies
 ---------------------
 
-Reference lists
+Reference lists that help to standardize content, perform searches and perform sitewide changes for all instances of a term.
+
+Taxonomy vocabularies and count of terms in each on 16 August 2018
 
 +--------------------------------------+----------------+
 | Taxonomy Vocabulary                  | Count of terms |
