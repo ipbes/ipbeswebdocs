@@ -14,6 +14,10 @@ Permission settings can be found under People on the administration menu: /admin
 
 Access control
 --------------
-Permissions to view specific pages are determined using website Roles and the access field in conjunction with with Taxonomy Access Control module (tac_lite). Content creators have to select access levels from the following options which are stored in the "Access" taxonomy vocabulary (https://ipbes-docs.readthedocs.io/en/latest/annex/taxonomy/access.html): 2c global; 3bi Land degradation; Bureau; Indicators_temp; IPBES5; Media; MEP; National Focal Point; Plenary; pstm review; Public; Registered; Secretariat; Super User
+Permissions to view specific pages are determined using website Roles and the access field in conjunction with with Taxonomy Access Control module (tac_lite). 
+
+Content creators have to select access levels from the following options which are stored in the "Access"_ taxonomy vocabulary: 2c global; 3bi Land degradation; Bureau; Indicators_temp; IPBES5; Media; MEP; National Focal Point; Plenary; pstm review; Public; Registered; Secretariat; Super User
 
 Settings for access control can be found when you click on "Configuration" in the administration menu: Configuration > Access by Taxonomy > View : https://www.ipbes.net/admin/config/people/tac_lite/scheme_1 
+
+.. _"Access": https://ipbes-docs.readthedocs.io/en/latest/annex/taxonomy/access.html
