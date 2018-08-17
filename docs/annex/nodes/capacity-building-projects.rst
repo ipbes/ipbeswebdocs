@@ -1,5 +1,12 @@
 Capacity building projects
 ==========================
+
+Maintained by: TSU Capacity building
+
+Create/Edit Permissions: secretariat
+
+Access: Public
+
 +----------------------+----------------------------+-----------------------+
 | FieldName            | Machinename                | Type                  |
 +----------------------+----------------------------+-----------------------+
