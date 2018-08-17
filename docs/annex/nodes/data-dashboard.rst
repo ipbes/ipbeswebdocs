@@ -1,5 +1,13 @@
 Data Dashboard
 ==============
+
+
+Maintained by: DKAN
+
+Create/Edit Permissions: administrator
+
+Access: Public
+
 +-------------+-------------+-----------------------+
 | FieldName   | Machinename | Type                  |
 +-------------+-------------+-----------------------+
