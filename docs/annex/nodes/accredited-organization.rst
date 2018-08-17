@@ -3,9 +3,9 @@ Accredited Organizations
 
 List of organizations that have been accredited by the Plenary to attend its sessions
 
-Administrator: Administrator, Secretariat
+Maintained by: Administrator, Secretariat
 
-Contributor: Secretariat
+Create/Edit Permissions: Secretariat
 
 Access: Public
 
