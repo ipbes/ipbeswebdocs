@@ -77,4 +77,6 @@ Content Types and node count for each on 16 August 2018
 | Webform                    | 14    |
 +----------------------------+-------+
 
-Details about each content type can be found `here <https://ipbes-docs.readthedocs.io/en/latest/annex/nodes/index.html>`_ 
+Details about each content type can be found here_ 
+
+.. _here: ../annex/node/index.rst
