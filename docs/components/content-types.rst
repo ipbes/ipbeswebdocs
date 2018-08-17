@@ -79,4 +79,4 @@ Content Types and node count for each on 16 August 2018
 
 Details about each content type can be found here_ 
 
-.. _here: ../annex/nodes/index.rst
+.. _here: https://ipbes-docs.readthedocs.io/en/latest/annex/nodes/index.html
