@@ -15,6 +15,7 @@ The Pantheon workflow requires code to be committed to dev and pulled up to <tes
 .. image:: ../images/hosting_pantheon_workflow.png
    :alt: Pantheon code and database flows.
 
+
 Domain name hosting
 -------------------
 The domain name services (DNS) are hosted by gandi.net
