@@ -10,7 +10,7 @@ Content Types and node count for each on 16 August 2018
 +----------------------------+-------+
 | Accredited organisations   | 384   |
 +----------------------------+-------+
-| Administration profile     | 5026  |
+| Administration profile     | 5032  |
 +----------------------------+-------+
 | Assessment                 | 3     |
 +----------------------------+-------+
