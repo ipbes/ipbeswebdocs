@@ -12,7 +12,7 @@ Content Types and node count for each on 16 August 2018
 +----------------------------+-------+
 | Administration profile     | 5032  |
 +----------------------------+-------+
-| Assessment                 | 3     |
+| Assessment                 | 5     |
 +----------------------------+-------+
 | Assessment IPBES           | 8     |
 +----------------------------+-------+
