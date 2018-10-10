@@ -11,8 +11,6 @@ Requirements
  
 Preparation
 -----------
-- Back up any view or page that is using the module
-- Make sure that no view or page is using the module
 - Disable module on live
 - Clone live environment to dev
 - Make sure that the module is contained in sites/all/modules/contrib and that you are not uninstalling a module that comes with the site distribution package
@@ -33,6 +31,8 @@ Steps for updating
 
 Steps for uninstalling
 ------------------
+- Back up any view or page that is using the module
+- Make sure that no view or page is using the module
 - Log into Pantheon and go to the dev environment
 - Switch development mode from git to SFTP
 - Go to terminal on Mac and change directory to the project folder e.g. cd ipbesnew
