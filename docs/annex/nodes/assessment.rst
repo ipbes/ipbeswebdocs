@@ -12,7 +12,7 @@ Access: Public
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | FieldName                                               | Machinename                     | Type                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Assessed Tools and instruments                          | field_tools_and_instruments_eva | Entity Reference           |
+| Policy instruments and policy support tools             | field_tools_and_instruments_eva | Entity Reference           |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Summary                                                 | body                            | Long text and summary      |
 +---------------------------------------------------------+---------------------------------+----------------------------+
@@ -32,7 +32,7 @@ Access: Public
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Issues covered by global targets and IPBES deliverables | field_issues                    | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Language                                                | field_library_document_language | Term reference             |
+| UN languages in which the assessment is available       | field_un_languages_multi        | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Lessons learnt                                          | field_lessons_learnt            | Long text                  |
 +---------------------------------------------------------+---------------------------------+----------------------------+
@@ -42,7 +42,7 @@ Access: Public
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Mandate                                                 | field_mandate                   | Long text                  |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Other languages                                         | field_language                  | List (text)                |
+| Other languages in which the assessment is available.   | field_language                  | List (text)                |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Peer review                                             | field_peer_review               | Long text                  |
 +---------------------------------------------------------+---------------------------------+----------------------------+
@@ -50,19 +50,23 @@ Access: Public
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Related Nature's contributions to people                | field_ncp                       | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Related Aichi Biodiversity Targets                      | field_units_analysis            | Term reference             |
+| Related Aichi Biodiversity Targets                      | field_aichi_biodiversity_targets| Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Sub/region covered                                      | field_sub_region                | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Temporal Coverage                                       | field_temporal_coverage         | Date                       |
+| Temporal coverage of the assessment                     | field_temporal_coverage         | Date                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Title                                                   | title                           | Node module element        |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Upload or select existing file                          | field_existing_file             | File                       |
+| Upload or select existing file - Add new file           | field_existing_file             | File                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Website                                                 | field_website                   | Link                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Workbench Access                                        | workbench_access                | Workbench Access settings. |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Related Sustainable Development Goals (SDGs)            | field_related_sdg               | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Related Terrestrial and aquatic units of analysis       | field_units_analysis            | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| IPBES Assessment                                        | field_ipbes_assessment          | Boolean                    |
 +---------------------------------------------------------+---------------------------------+----------------------------+
