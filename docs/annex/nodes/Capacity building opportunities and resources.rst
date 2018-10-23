@@ -1,4 +1,4 @@
-Learning Opportunity
+Capacity building opportunities and resources
 ====================
 
 Use: Policy support portal
@@ -24,7 +24,7 @@ Maintained by: UNEP-WCMC, TSU Capacity Building
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Language                                                | field_library_document_language | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Learning opportunity type                               | field_training_type             | Term reference             |
+| Capacity-building opportunity or resource type          | field_training_type             | Term reference             |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Logo                                                    | field_logo                      | Image                      |
 +---------------------------------------------------------+---------------------------------+----------------------------+
@@ -38,11 +38,11 @@ Maintained by: UNEP-WCMC, TSU Capacity Building
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Requirements                                            | field_requirements              | Long text                  |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Summary of resource                                     | body                            | Long text and summary      |
+| Summary of the capacity-building opportunity or resource| body                            | Long text and summary      |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Title                                                   | title                           | Node module element        |
 +---------------------------------------------------------+---------------------------------+----------------------------+
-| Tools and instruments                                   | field_tools_and_instruments_eva | Entity Reference           |
+| Policy instruments and policy support tools             | field_tools_and_instruments_eva | Entity Reference           |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Upload                                                  | field_existing_file             | File                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
@@ -51,4 +51,14 @@ Maintained by: UNEP-WCMC, TSU Capacity Building
 | Website                                                 | field_website                   | Link                       |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Workbench Access                                        | workbench_access                | Workbench Access settings. |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Related Aichi Biodiversity Targets                      | field_aichi_biodiversity_targets| Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Related Sustainable Development Goals (SDGs)            | field_related_sdg               | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Countries                                               | field_country                   | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Sub/region covered                                      | field_sub_region                | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
+| Assessments                                             | field_assessments               | Entity Reference           |
 +---------------------------------------------------------+---------------------------------+----------------------------+
