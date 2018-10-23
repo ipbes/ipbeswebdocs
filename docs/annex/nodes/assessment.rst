@@ -65,3 +65,4 @@ Access: Public
 | Workbench Access                                        | workbench_access                | Workbench Access settings. |
 +---------------------------------------------------------+---------------------------------+----------------------------+
 | Related Sustainable Development Goals (SDGs)            | field_related_sdg               | Term reference             |
++---------------------------------------------------------+---------------------------------+----------------------------+
