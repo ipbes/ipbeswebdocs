@@ -29,7 +29,7 @@ Nodes
    Harvest Source <harvest-source>
    In Session Documents <in-session-documents>
    Indicators <indicators>
-   Learning Opportunity <learning-opportunity>
+   Capacity building opportunities and-resources <capacity-building-opportunities-and-resources.rst>
    Media Watch <media-watch>
    Methodological Guidance <methodological-guidance>
    News <news>
