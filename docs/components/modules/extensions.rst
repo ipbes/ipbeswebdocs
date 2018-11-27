@@ -11,6 +11,7 @@ Additional modules added by IPBES to extend the functionality of Drupal and DKAN
             custom/ (custom modules)
          themes/ (your themes)
 
+(*) Replaces version in DKAN and needs to be checked after pulling DKAN upstream code
 
 +-----------------------------------+-----------------------------+-----------------------+-------------+
 | module                            | machine                     | version               | deactivated |
@@ -75,7 +76,7 @@ Additional modules added by IPBES to extend the functionality of Drupal and DKAN
 +-----------------------------------+-----------------------------+-----------------------+-------------+
 | Geocoder                          | geocoder                    | 7.x-1.3               | FALSE       |
 +-----------------------------------+-----------------------------+-----------------------+-------------+
-| Geofield                          | geofield                    | 7.x-2.3               | FALSE       |
+| Geofield*                         | geofield                    | 7.x-2.2               | FALSE       |
 +-----------------------------------+-----------------------------+-----------------------+-------------+
 | GeoJSON                           | views_geojson               |                       | FALSE       |
 +-----------------------------------+-----------------------------+-----------------------+-------------+
