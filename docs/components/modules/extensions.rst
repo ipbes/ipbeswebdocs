@@ -15,6 +15,7 @@ Additional modules added by IPBES to extend the functionality of Drupal and DKAN
 
 The following modules have been uninstalled:
 - honeypot (added to DKAN package)
+- harmony_core, harmony_access, harmony_access_og, harmony_default_permissions, harmony_forum_access, harmony_moderation, harmony_Search (replaced with Advanced Forum)
 
 +-----------------------------------+-----------------------------+-----------------------+
 | module                            | machine                     | version               |
@@ -83,21 +84,7 @@ The following modules have been uninstalled:
 +-----------------------------------+-----------------------------+-----------------------+
 | GeoJSON                           | views_geojson               |                       |
 +-----------------------------------+-----------------------------+-----------------------+
-| Google Analytics                  | google_analytics            | 7.x-2.5               |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Access                  | harmony_access              | 7.x-1.0-alpha2        |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Access                  | harmony_access              | 7.x-1.0-alpha1        |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Core                    | harmony_core                | 7.x-1.0-alpha10+3-dev |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Forum Access            | harmony_forum_access        |                       |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Moderation              | harmony_moderation          | 7.x-1.x-dev           |
-+-----------------------------------+-----------------------------+-----------------------+
-| Harmony - Search                  | harmony_search              | 7.x-1.x-dev           |
-+-----------------------------------+-----------------------------+-----------------------+
-| Honeypot                          | honeypot                    | 7.x-1.25              |
+| Google Analytics                  | google_analytics            | 7.x-2.5               |          |
 +-----------------------------------+-----------------------------+-----------------------+
 | Inline Entity Form                | inline_entity_form          | 7.x-1.8               |
 +-----------------------------------+-----------------------------+-----------------------+
@@ -122,7 +109,6 @@ The following modules have been uninstalled:
 | Message notify                    | message_notify              | 7.x-2.5               |
 +-----------------------------------+-----------------------------+-----------------------+
 | Message                           | message                     | 7.x-1.12              |
-+-----------------------------------+-----------------------------+-----------------------+
 +-----------------------------------+-----------------------------+-----------------------+
 | module                            | machine                     | version               |
 +-----------------------------------+-----------------------------+-----------------------+
