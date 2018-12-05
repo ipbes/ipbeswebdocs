@@ -13,8 +13,8 @@ Additional modules added by IPBES to extend the functionality of Drupal and DKAN
 
 (*) Replaces version in DKAN and needs to be checked after pulling DKAN upstream code
 
-The following modules have been uninstalled: honeypot (added to DKAN package)
-
+The following modules have been uninstalled:
+- honeypot (added to DKAN package)
 
 +-----------------------------------+-----------------------------+-----------------------+
 | module                            | machine                     | version               |
