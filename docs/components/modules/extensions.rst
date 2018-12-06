@@ -16,7 +16,6 @@ Additional modules added by IPBES to extend the functionality of Drupal and DKAN
 The following modules have been uninstalled:
 - honeypot (added to DKAN package)
 - harmony_core, harmony_access, harmony_access_og, harmony_default_permissions, harmony_forum_access, harmony_moderation, harmony_Search (replaced with Advanced Forum)
-
 +-----------------------------------+-----------------------------+----------------+
 | module                            | machine                     | version        |
 +-----------------------------------+-----------------------------+----------------+
@@ -127,6 +126,8 @@ The following modules have been uninstalled:
 | Redirect                          | redirect                    | 7.x-1.0-rc3    |
 +-----------------------------------+-----------------------------+----------------+
 | Redirect                          | redirect                    | 7.x-1.8        |
++-----------------------------------+-----------------------------+----------------+
+| Redis                             | redis                       | 7.x-3.17       |
 +-----------------------------------+-----------------------------+----------------+
 | Rules Condition: Node unpublished | rcnu                        | 7.x-1.0        |
 +-----------------------------------+-----------------------------+----------------+
